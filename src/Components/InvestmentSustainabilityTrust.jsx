@@ -1,6 +1,6 @@
 import React from "react";
 import { getPublicImage } from '../shared/utils/assetPaths';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const InvestmentSustainabilityTrust = () => {
   return (

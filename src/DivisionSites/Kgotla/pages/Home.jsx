@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 // Import images directly (bundled with webpack like Coffee division)
@@ -50,6 +51,10 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>Kgotla Ya Rakhudu — Cultural Governance & Community Heritage</title>
+        <meta name="description" content="Kgotla Ya Rakhudu is the traditional governance structure led by Kgosana Dr Koketso Rakhudu, preserving Tswana heritage and driving community development in Limpopo." />
+      </Helmet>
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-r from-forest to-kgotla-gold text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto fade-in relative z-10 flex flex-col items-center">

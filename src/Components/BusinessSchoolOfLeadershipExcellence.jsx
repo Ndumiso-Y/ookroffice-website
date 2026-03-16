@@ -1,6 +1,6 @@
 import React from "react";
 import { getPublicImage } from '../shared/utils/assetPaths';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const BusinessSchoolOfLeadershipExcellence = () => {
   return (
@@ -18,7 +18,6 @@ const BusinessSchoolOfLeadershipExcellence = () => {
           alt="Business School Of Leadership Excellence logo"
           loading="lazy"
           className="mx-auto mb-4 w-64 h-64 object-contain opacity-90"
-          loading="lazy"
         />
 
         {/* Introduction */}

@@ -15,7 +15,7 @@ import {
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
 import ResponsiveLogo from './ResponsiveLogo';
-import { divisionLinks } from '../config/divisionLinks';
+import { divisionLinks } from '../shared/config/divisions';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

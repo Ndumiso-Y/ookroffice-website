@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 
 import ErrorBoundary from './components/ErrorBoundary';
@@ -23,6 +24,7 @@ import Event5 from './pages/gallery/Event5';
 
 export default function TVEISite() {
   return (
+    <HelmetProvider>
     <ErrorBoundary>
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -47,5 +49,6 @@ export default function TVEISite() {
         <Footer />
       </div>
     </ErrorBoundary>
+    </HelmetProvider>
   );
 }

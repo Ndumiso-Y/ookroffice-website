@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { getPublicImage } from '../shared/utils/assetPaths';
 import { Link } from 'react-router-dom';
 import { FaSeedling, FaLeaf, FaHandHoldingUsd, FaFacebook, FaCoffee, FaExternalLinkAlt, FaGlobe } from 'react-icons/fa';
-import { Helmet } from 'react-helmet';
-import { divisionLinks } from '../config/divisionLinks';
+import { Helmet } from 'react-helmet-async';
+import { divisionLinks } from '../shared/config/divisions';
 
 const Divisions = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);

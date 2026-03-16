@@ -109,3 +109,11 @@ export const getAllDivisionIds = () => {
 export const getAllDivisions = () => {
   return Object.values(DIVISIONS);
 };
+
+/**
+ * Division link config — derived from DIVISIONS.
+ * Provides { url, enabled } shape used by Navbar, Home, and Divisions components.
+ */
+export const divisionLinks = Object.fromEntries(
+  Object.entries(DIVISIONS).map(([key, div]) => [key, { url: div.basePath, enabled: true }])
+);

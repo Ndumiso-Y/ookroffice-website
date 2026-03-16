@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,7 +17,7 @@ import Contact from './pages/Contact';
 
 export default function KRFSite() {
   return (
-    <>
+    <HelmetProvider>
       <Navbar />
       <PageTransition>
         <Routes>
@@ -30,6 +31,6 @@ export default function KRFSite() {
         </Routes>
       </PageTransition>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }

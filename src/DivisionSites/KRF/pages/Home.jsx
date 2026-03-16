@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import HeroVideo from '../components/HeroVideo'
 import PartnersLogos from '../components/PartnersLogos'
 import { Link } from 'react-router-dom'
@@ -6,6 +7,10 @@ import { visionMission, focusAreas, ctaSection } from '../config/content'
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <Helmet>
+        <title>Koketso Rakhudu Foundation — Empowering Communities Through Education & Enterprise</title>
+        <meta name="description" content="The Koketso Rakhudu Foundation (KRF) empowers individuals through education, mentorship, and entrepreneurial resources to build equitable, self-sufficient communities." />
+      </Helmet>
       <HeroVideo />
 
       {/* Vision & Mission */}

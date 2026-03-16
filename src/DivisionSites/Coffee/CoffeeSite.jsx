@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import './index.css';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
@@ -44,7 +45,11 @@ export default function CoffeeSite() {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
+      <Helmet>
+        <title>Coffee With Dr Rakhudu — Leadership Conversations Over Coffee</title>
+        <meta name="description" content="Coffee With Dr Rakhudu is an intimate leadership development programme connecting emerging leaders with Dr Koketso Rakhudu through mentorship, dialogue, and community-building." />
+      </Helmet>
       <Header />
       <main>
         <Hero />
@@ -60,6 +65,6 @@ export default function CoffeeSite() {
         <ApplyBanner />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }

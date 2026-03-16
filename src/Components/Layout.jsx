@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import LoadingWarthog from './LoadingWarthog';
 import VideoPopupCard from './VideoPopupCard';
+import CookieBanner from './CookieBanner';
 
 function Layout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ function Layout({ children }) {
           </main>
           <Footer />
           {showVideo && <VideoPopupCard onClose={() => setShowVideo(false)} />}
+          <CookieBanner />
         </>
       )}
     </div>

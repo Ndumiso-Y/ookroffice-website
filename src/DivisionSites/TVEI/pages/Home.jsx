@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import LazyImage from "../components/LazyImage";
 import heroImage from "../assets/optimized/1.jpg";
@@ -101,6 +102,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>The Village Economy Indaba — Driving Rural Economic Transformation</title>
+        <meta name="description" content="The Village Economy Indaba (TVEI) is Dr Koketso Rakhudu's platform for igniting village-based economic growth through agriculture, trade, and community enterprise." />
+      </Helmet>
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center text-white text-center px-4">
         <img src={heroImage} alt="Village Landscape" className="absolute inset-0 w-full h-full object-cover z-0" />

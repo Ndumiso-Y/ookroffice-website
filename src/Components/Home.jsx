@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ArrowRight, Calendar, Users, Target, Phone } from 'lucide-react';
 import Carousel from './Carousel';
 import { FaFacebook, FaGlobe, FaExternalLinkAlt } from 'react-icons/fa';
-import { divisionLinks } from '../config/divisionLinks';
+import { divisionLinks } from '../shared/config/divisions';
 
 const TaglineCarousel = () => {
   const taglines = [

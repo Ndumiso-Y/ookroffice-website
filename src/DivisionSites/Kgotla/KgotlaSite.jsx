@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ import PreviousEvents from './pages/PreviousEvents';
 
 export default function KgotlaSite() {
   return (
+    <HelmetProvider>
     <Layout>
       <Header />
       <main className="min-h-screen">
@@ -31,5 +33,6 @@ export default function KgotlaSite() {
       </main>
       <Footer />
     </Layout>
+    </HelmetProvider>
   );
 }
