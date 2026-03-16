@@ -11,9 +11,14 @@ function Layout({ children }) {
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setLoading(false);
-      // Small delay so the page content settles before the popup appears
-      const popupTimer = setTimeout(() => setShowVideo(true), 400);
-      return () => clearTimeout(popupTimer);
+      const alreadySeen = sessionStorage.getItem('ookr_popup_shown');
+      if (!alreadySeen) {
+        const popupTimer = setTimeout(() => {
+          setShowVideo(true);
+          sessionStorage.setItem('ookr_popup_shown', '1');
+        }, 400);
+        return () => clearTimeout(popupTimer);
+      }
     }, 500);
     return () => clearTimeout(loadTimer);
   }, []);

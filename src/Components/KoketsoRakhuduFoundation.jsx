@@ -11,9 +11,10 @@ function KoketsoRakhuduFoundation() {
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-[#397D5A] mb-2">Koketso Rakhudu Foundation</h1>
         </div>
-        <img 
-          src={getPublicImage("KRFDesign.jpg")} 
-          alt="Logo" 
+        <img
+          src={getPublicImage("KRFDesign.jpg")}
+          alt="Logo"
+          loading="lazy"
           className="mx-auto mb-4 w-64 h-64 object-contain opacity-90"
         />
         

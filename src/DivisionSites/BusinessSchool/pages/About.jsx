@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getAssetPath } from '../utils/assetPath';
-import VideoPlayer from '../components/VideoPlayer';
 
 const About = () => {
   return (

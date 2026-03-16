@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { getAssetPath } from '../utils/assetPath';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +19,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Form submission logic would go here
-    console.log('Form submitted:', formData);
     alert('Thank you for your message! We will be in touch soon.');
     setFormData({ name: '', email: '', company: '', message: '' });
   };

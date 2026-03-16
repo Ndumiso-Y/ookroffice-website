@@ -138,9 +138,10 @@ function Leadership() {
           <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45" />
           <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full" />
           
-          <img 
-            src={getPublicImage("KgosanaSmiling.jpeg")} 
-            alt="Dr Kgosana Koketso Rakhudu" 
+          <img
+            src={getPublicImage("KgosanaSmiling.jpeg")}
+            alt="Dr Kgosana Koketso Rakhudu"
+            loading="lazy"
             className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
           />
           <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">

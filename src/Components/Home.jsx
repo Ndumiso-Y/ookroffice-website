@@ -241,9 +241,10 @@ function Home() {
               </Link>
             </div>
             <div className="relative h-[400px]">
-              <img 
-                src={getPublicImage("Kgosanaquote.jpeg")} 
-                alt="Vision" 
+              <img
+                src={getPublicImage("Kgosanaquote.jpeg")}
+                alt="Vision"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>

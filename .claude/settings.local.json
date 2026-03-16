@@ -25,7 +25,9 @@
       "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\Ndumiso\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\*ffmpeg*.exe 2>&1 | head -5\")",
       "Bash(cmd.exe /c \"dir \"\"C:\\\\Users\\\\Ndumiso\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\"\"\")",
       "Bash(npm run:*)",
-      "Bash(powershell.exe -Command \"Compress-Archive -Path ''build\\\\*'' -DestinationPath ''website-update.zip'' -Force\")"
+      "Bash(powershell.exe -Command \"Compress-Archive -Path ''build\\\\*'' -DestinationPath ''website-update.zip'' -Force\")",
+      "Bash(node -e \":*)",
+      "Bash(du -sh \"d:/Digital Agency/DrKoketsoRakhudu/OOKROFFICE/Website/build/\"*)"
     ]
   }
 }

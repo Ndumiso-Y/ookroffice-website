@@ -64,9 +64,10 @@ const ObjectiveCard = ({ title, description, icon: Icon, details, image }) => {
                   </div>
                 ))}
                 {image && (
-                  <img 
-                    src={image} 
+                  <img
+                    src={image}
                     alt={title}
+                    loading="lazy"
                     className="w-full h-64 object-cover rounded-lg mt-4"
                   />
                 )}

@@ -4,10 +4,10 @@ const path = require('path');
 
 // Configuration
 const config = {
-  quality: 85, // High quality (80-90 is optimal for web)
-  maxWidth: 1920, // Max width for images
-  maxHeight: 1080, // Max height for images
-  createBackup: true, // Backup original images
+  quality: 72, // Aggressive but visually lossless for web
+  maxWidth: 1920,
+  maxHeight: 1080,
+  createBackup: false, // Git is our backup
 };
 
 // Directories to optimize
@@ -51,19 +51,10 @@ async function optimizeImage(imagePath) {
   try {
     const originalSize = fs.statSync(imagePath).size;
 
-    // Skip if already small enough (< 200KB)
-    if (originalSize < 200 * 1024) {
-      console.log(`⏭️  Skipping ${imagePath} (already optimized: ${(originalSize / 1024).toFixed(2)} KB)`);
+    // Skip if already small enough (< 100KB)
+    if (originalSize < 100 * 1024) {
       stats.skipped++;
       return;
-    }
-
-    // Create backup if enabled
-    if (config.createBackup) {
-      const backupPath = imagePath + '.backup';
-      if (!fs.existsSync(backupPath)) {
-        fs.copyFileSync(imagePath, backupPath);
-      }
     }
 
     // Get image metadata

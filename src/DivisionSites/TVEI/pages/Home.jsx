@@ -52,7 +52,6 @@ const Home = () => {
         return !seen;
       }
     } catch (error) {
-      console.warn("SessionStorage not available:", error);
     }
     // Default to not showing video if sessionStorage fails
     return false;
@@ -67,7 +66,6 @@ const Home = () => {
             sessionStorage.setItem("hasSeenIntro", "true");
           }
         } catch (error) {
-          console.warn("Cannot save to sessionStorage:", error);
         }
       }, 6000); // 6 seconds
       return () => clearTimeout(timer);

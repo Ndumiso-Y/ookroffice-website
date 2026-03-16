@@ -88,9 +88,6 @@ export default function WhyJoin() {
         playsInline
         preload="auto"
         src={slowAlphaLeftVideo}
-        onLoadStart={() => console.log('WhyJoin coffee splash loading...')}
-        onCanPlay={() => console.log('WhyJoin coffee splash ready!')}
-        onError={(e) => console.log('WhyJoin coffee splash error:', e)}
       />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

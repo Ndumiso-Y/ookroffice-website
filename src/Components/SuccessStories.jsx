@@ -132,6 +132,7 @@ const SuccessStory = ({ story }) => {
                         <div className="relative w-full h-80">
                             <iframe
                                 src={currentVideo}
+                                title="Impact story video"
                                 allow="autoplay"
                                 className="w-full h-full rounded-md"
                             ></iframe>

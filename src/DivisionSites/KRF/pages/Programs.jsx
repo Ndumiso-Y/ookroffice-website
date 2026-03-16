@@ -11,7 +11,6 @@ import {
   BadgeCheckIcon,
   ComputerIcon,
   UsersIcon,
-  BriefcaseIcon,
   LightBulbIcon,
   HeartIcon,
   ClockIcon,

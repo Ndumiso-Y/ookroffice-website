@@ -34,7 +34,7 @@ export default function CoffeeFramework() {
           trigger: videoRef.current,
           start: 'top 80%',
           once: true,
-          onEnter: () => console.log('Coffee splash animation triggered!')
+          onEnter: () => {}
         }
       })
     })

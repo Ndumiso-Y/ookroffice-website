@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Phone, Mail, Send, User, MessageSquare } from 'lucide-react'
+import { Phone, Mail, Send, User } from 'lucide-react'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,7 +19,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Handle form submission here
-    console.log('Form submitted:', formData)
   }
 
   return (

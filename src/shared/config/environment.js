@@ -114,9 +114,11 @@ if (appConfig.isDevelopment) {
   }
 }
 
-export default {
+const config = {
   email: emailConfig,
   app: appConfig,
   features,
   publicUrl,
 };
+
+export default config;

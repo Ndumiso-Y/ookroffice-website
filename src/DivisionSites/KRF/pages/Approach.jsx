@@ -15,7 +15,6 @@ import {
   TargetIcon,
   CheckCircleIcon,
   ChartBarIcon,
-  ClockIcon,
   SparklesIcon
 } from '../components/Icons'
 
