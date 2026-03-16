@@ -45,9 +45,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.5%",
+      "last 2 versions",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "samsung >= 12"
     ],
     "development": [
       "last 1 chrome version",

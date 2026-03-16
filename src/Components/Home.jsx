@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { getPublicImage } from '../shared/utils/assetPaths';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -112,6 +113,13 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 function Home() {
   return (
     <div className="home-page min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Home | Office of Kgosana Dr Koketso Rakhudu</title>
+        <meta name="description" content="Welcome to the official website of the Office of Kgosana Dr Koketso Rakhudu (OOKR) — championing traditional leadership, heritage, and community development in South Africa." />
+        <meta property="og:title" content="Home | Office of Kgosana Dr Koketso Rakhudu" />
+        <meta property="og:description" content="Official home of the Office of Kgosana Dr Koketso Rakhudu — traditional leadership, community development, and heritage in South Africa." />
+        <meta property="og:url" content="https://drkoketsorakhudu.com/" />
+      </Helmet>
       <TaglineCarousel />
       
       {/* Hero Section with Parallax Effect */}
