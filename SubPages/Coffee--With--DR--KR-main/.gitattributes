@@ -1,0 +1,15 @@
+# Normalize all text files to LF in the repo
+* text=auto eol=lf
+
+# Common web files (explicit, helps when teammates use different OS)
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.svg  text eol=lf

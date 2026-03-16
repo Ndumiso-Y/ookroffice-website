@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(do echo \"Compressing $f...\")",
+      "Bash(for:*)",
+      "Bash(echo:*)",
+      "Bash(do mv \"$f\" \"$f#temp_\")",
+      "Bash(python:*)",
+      "Bash(zip:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

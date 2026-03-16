@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path . -Filter index.html -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Test-Path \".\\src\" -PathType Container)",
+      "Bash(Test-Path \".\\build\" -PathType Container)",
+      "Bash(Test-Path \".\\dist\" -PathType Container)",
+      "Bash(if [ -f \"package.json\" ])",
+      "Bash(then cat package.json)",
+      "Bash(else echo \"No package.json found\")",
+      "Bash(fi)",
+      "Bash(pkill serve:*)",
+      "Bash(cat:*)",
+      "Bash(pkill:*)",
+      "Bash(ls:*)",
+      "Bash(test:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(xcopy:*)",
+      "Bash(find 'd:/Digital Agency/DrKoketsoRakhudu/OOKROFFICE/Website/src/shared/' -type f -name *.js -o -name *.jsx -o -name *.ts -o -name *.tsx)",
+      "Bash(cmd.exe /c \"where ffmpeg 2>&1\")",
+      "Bash(cmd.exe /c \"where ffmpeg\")",
+      "Bash(cmd.exe /c \"ffmpeg -version 2>&1 | findstr version\")",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\Ndumiso\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\*ffmpeg*.exe 2>&1 | head -5\")",
+      "Bash(cmd.exe /c \"dir \"\"C:\\\\Users\\\\Ndumiso\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\"\"\")",
+      "Bash(npm run:*)",
+      "Bash(powershell.exe -Command \"Compress-Archive -Path ''build\\\\*'' -DestinationPath ''website-update.zip'' -Force\")"
+    ]
+  }
+}

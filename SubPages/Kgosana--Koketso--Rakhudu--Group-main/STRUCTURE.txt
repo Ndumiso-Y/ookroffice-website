@@ -1,0 +1,111 @@
+KKR GROUP WEBSITE - PROJECT STRUCTURE
+=====================================
+
+Website/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                # GitHub Actions deployment workflow
+│
+├── public/
+│   ├── assets/
+│   │   ├── ASSETS_README.md         # Asset requirements & compression specs
+│   │   └── [22 media files to add] # Videos, images, favicon
+│   └── index.html                   # HTML entry point (built)
+│
+├── src/
+│   ├── components/
+│   │   ├── Carousel.jsx             # Reusable carousel component
+│   │   └── Navigation.jsx           # Main navigation bar
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx                 # Home page with video hero
+│   │   ├── About.jsx                # About page with 3-img carousel
+│   │   ├── FocusAreas.jsx           # Focus areas with 4 carousels + video
+│   │   ├── Leadership.jsx           # Leadership profile page
+│   │   ├── Projects.jsx             # Projects with 3-img carousel
+│   │   └── Contact.jsx              # Contact form page
+│   │
+│   ├── App.jsx                      # Main app with HashRouter
+│   ├── main.jsx                     # React entry point
+│   └── index.css                    # Global styles + Tailwind imports
+│
+├── .gitignore                       # Git exclusions
+├── package.json                     # Project dependencies
+├── package-lock.json                # Locked dependency versions
+├── postcss.config.js                # PostCSS configuration
+├── tailwind.config.js               # Tailwind + brand theme config
+├── vite.config.js                   # Vite build configuration
+│
+├── README.md                        # Comprehensive project documentation
+├── DEPLOYMENT.md                    # Deployment guide
+├── PROJECT_SUMMARY.md               # Implementation summary
+└── STRUCTURE.txt                    # This file
+
+=====================================
+INTERACTIVE ELEMENTS
+=====================================
+
+CAROUSELS (5):
+1. About page           → 3 images (about-banner-1/2/3.jpg)
+2. Empowerment         → 2 images (focus-empowerment-1/2.jpg)
+3. Agriculture         → 3 images (focus-agriculture-1/2/3.jpg)
+4. Skills Development  → 3 images (focus-skills-1/2/3.jpg)
+5. Projects            → 3 images (projects-1/2/3.jpg)
+
+VIDEOS (2):
+1. Home hero           → kkr-hero.mp4 (looped background)
+2. Enterprise spotlight → focus-enterprise-marabo.mp4 (with controls)
+
+=====================================
+BRAND CONFIGURATION
+=====================================
+
+Colors (tailwind.config.js):
+- royal-blue:   #174E81
+- gold:         #C99A3E
+- charcoal:     #1A1A1A
+- neutral-gray: #F4F4F4
+- white:        #FFFFFF
+
+Fonts (index.css):
+- Headings: Poppins / Montserrat
+- Body:     Inter / Lato
+
+=====================================
+KEY FEATURES
+=====================================
+
+✓ React 18 + Vite + TailwindCSS
+✓ HashRouter (GitHub Pages compatible)
+✓ SEO optimized (react-helmet-async)
+✓ Responsive design (320px+)
+✓ Accessible (ARIA labels, alt text)
+✓ Smooth animations & transitions
+✓ Auto-deployment via GitHub Actions
+
+=====================================
+ROUTING STRUCTURE
+=====================================
+
+/                 → Home
+/about            → About
+/focus-areas      → Focus Areas
+/leadership       → Leadership
+/projects         → Projects
+/contact          → Contact
+
+(All routes use # prefix for GH Pages)
+
+=====================================
+NEXT STEPS
+=====================================
+
+1. Add 22 media assets to /public/assets/
+2. Initialize Git repository
+3. Push to GitHub
+4. Enable GitHub Pages (Settings → Pages)
+5. Deploy via GitHub Actions
+6. Verify live site
+
+=====================================

@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tailwindcss init:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(Move-Item \"F:\\Digital Agency\\Dr.Koketso Rakhudu Business School of Leadership Excellence\\Website\\dist\\assets\\Masterclassess- Speaker conference stage, keynote, business seminar.mp4\" \"F:\\Digital Agency\\Dr.Koketso Rakhudu Business School of Leadership Excellence\\Website\\public\\assets\\masterclasses-speaker-conference.mp4\" -Force)",
+      "Bash(Move-Item \"F:\\Digital Agency\\Dr.Koketso Rakhudu Business School of Leadership Excellence\\Website\\dist\\assets\\Dr Koketso Rakhudu.jpg\" \"F:\\Digital Agency\\Dr.Koketso Rakhudu Business School of Leadership Excellence\\Website\\public\\assets\\dr-koketso-rakhudu.jpg\" -Force)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfix: replace emojis with lucide-react icons, logo hero, storytelling video segments, assets & deploy\n\n- Replaced all emojis site-wide with lucide-react Icon components\n- Made BSLE logo the hero; moved previous hero video to Welcome section\n- Implemented SegmentVideo component with custom Play/Pause controls (no native controls)\n- Relocated and renamed video assets from dist/ to public/assets/ with kebab-case naming\n- Community section loops 181-209s; Initiatives masterclass loops 618-648s\n- ESG video loops silently with no native controls\n- Updated Events with TBA placeholders; Contact with xxx placeholders\n- Added .gitattributes for LF line endings\n- Updated vite.config.js base path for GitHub Pages deployment\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(powershell:*)",
+      "Bash(awk:*)",
+      "Bash(ls:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(git filter-repo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

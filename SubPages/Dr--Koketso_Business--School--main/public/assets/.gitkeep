@@ -1,0 +1,27 @@
+# Assets Directory
+
+Place all media files in this directory:
+
+## Videos (≤ 25 MB each, MP4 format)
+- hero.mp4 + hero-cover.jpg
+- community-impact.mp4 + community-impact-cover.jpg
+- programmes-esg.mp4 + programmes-esg-cover.jpg
+- initiatives-masterclass.mp4 + initiatives-masterclass-cover.jpg
+
+## Images (≤ 500 KB each, JPG/PNG format)
+- logo-bsle.png
+- favicon.png
+- about-vision.jpg
+- about-mission.jpg
+- leadership-dr-rakhudu.jpg
+- events-1.jpg
+- events-2.jpg
+- events-3.jpg
+- events-4.jpg
+- events-5.jpg
+- contact-bg.jpg
+
+## Notes:
+- All video files should have a corresponding poster image (filename-cover.jpg)
+- Use lazy loading for images in carousels
+- Optimize all images before uploading

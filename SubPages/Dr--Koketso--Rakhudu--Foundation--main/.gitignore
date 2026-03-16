@@ -1,0 +1,16 @@
+﻿node_modules
+dist
+.vscode
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Original large video files (only use optimized versions)
+src/assets/hero/UniStudent.mov
+src/assets/videos/InspiringTalkDrKoketso.mp4
+src/assets/videos/focus-enterprise-marabo.mp4
+src/assets/videos/focus-enterprise-marabo-cover.jpg
