@@ -1,5 +1,5 @@
 // src/components/Lightbox.jsx
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 export default function Lightbox({ images, isOpen, onClose, startIndex = 0 }) {
   const [currentIndex, setCurrentIndex] = useState(startIndex)
@@ -7,6 +7,14 @@ export default function Lightbox({ images, isOpen, onClose, startIndex = 0 }) {
   useEffect(() => {
     setCurrentIndex(startIndex)
   }, [startIndex, isOpen])
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
+  }, [images.length])
+
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+  }, [images.length])
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -18,15 +26,7 @@ export default function Lightbox({ images, isOpen, onClose, startIndex = 0 }) {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, currentIndex])
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length)
-  }
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
-  }
+  }, [isOpen, onClose, goToNext, goToPrevious])
 
   if (!isOpen) return null
 
