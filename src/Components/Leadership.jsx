@@ -71,6 +71,7 @@ function Leadership() {
           <motion.img
             src={getPublicImage("LeadershipStructure1.jpg")}
             alt="Office of Kgosana Dr Koketso Rakhudu Executive Structure"
+            loading="lazy"
             className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,6 +82,7 @@ function Leadership() {
           <motion.img
             src={getPublicImage("StrategyBusinessDev.jpg")}
             alt="Strategy & Business Development Structure"
+            loading="lazy"
             className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -91,6 +93,7 @@ function Leadership() {
           <motion.img
             src={getPublicImage("OperationsSystems.jpg")}
             alt="Operations & Systems Structure"
+            loading="lazy"
             className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -101,6 +104,7 @@ function Leadership() {
           <motion.img
             src={getPublicImage("FinanceCompliance.jpg")}
             alt="Finance & Compliance Structure"
+            loading="lazy"
             className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -111,6 +115,7 @@ function Leadership() {
           <motion.img
             src={getPublicImage("ProgrammesDelivery.jpg")}
             alt="Programmes & Delivery Structure"
+            loading="lazy"
             className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

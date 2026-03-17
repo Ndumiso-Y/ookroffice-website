@@ -79,6 +79,7 @@ const SuccessStory = ({ story }) => {
                                     <img
                                         src={item.thumbnail || "/images/defaultThumbnail.png"}
                                         alt="Video Thumbnail"
+                                        loading="lazy"
                                         className="w-full h-48 object-contain rounded-md"
                                     />
                                     <button
@@ -125,15 +126,17 @@ const SuccessStory = ({ story }) => {
                     <div ref={modalRef} className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-4 relative">
                         <button
                             onClick={closeModal}
+                            aria-label="Close video"
                             className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
                         >
-                            X
+                            ✕
                         </button>
                         <div className="relative w-full h-80">
                             <iframe
                                 src={currentVideo}
                                 title="Impact story video"
-                                allow="autoplay"
+                                allow="autoplay; fullscreen"
+                                allowFullScreen
                                 className="w-full h-full rounded-md"
                             ></iframe>
                         </div>

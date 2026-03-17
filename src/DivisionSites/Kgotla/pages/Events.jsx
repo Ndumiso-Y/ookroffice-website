@@ -52,10 +52,15 @@ export default function Events() {
               <div
                 className="flex-shrink-0 w-24 h-24 ml-6 cursor-pointer hover:opacity-90 transition"
                 onClick={() => setModalEvent(event)}
+                role="button"
+                aria-label={`View details for ${event.title}`}
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && setModalEvent(event)}
               >
                 <img
                   src={event.image}
                   alt={event.title}
+                  loading="lazy"
                   className="w-full h-full object-contain rounded-lg shadow-sm"
                 />
               </div>
@@ -108,6 +113,7 @@ export default function Events() {
             <button
               className="absolute top-2 right-2 text-white bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700"
               onClick={() => setModalEvent(null)}
+              aria-label="Close event details"
             >
               &times;
             </button>

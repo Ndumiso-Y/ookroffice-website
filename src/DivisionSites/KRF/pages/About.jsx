@@ -81,7 +81,7 @@ export default function About() {
             src={Founder}
             alt="Dr. Koketso Rakhudu — Founder & Visionary"
             className="relative rounded-3xl shadow-2xl shadow-black/20 w-full h-auto transition-all duration-500 group-hover:shadow-2xl group-hover:scale-[1.02]"
-            loading="eager"
+            loading="lazy"
           />
 
           {/* Floating badge */}
