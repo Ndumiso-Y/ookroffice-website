@@ -79,21 +79,21 @@ const Divisions = () => {
         />
         <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">Investment & Sustainability Development Trust</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Driving economic growth through sustainable investment, focusing on sectors like agriculture, renewable energy, and small enterprise development.
+          Driving sustainable investment through approved priorities including Food Security & Agriculture, Energy Security & Transition, and Economic Diversification & Growth.
         </p>
 
         <div className="flex justify-around items-center mt-6">
           <div className="text-center">
             <FaSeedling className="text-4xl text-[#1B5538] mb-2" />
-            <p className="text-gray-700 font-semibold">Agriculture</p>
+            <p className="text-gray-700 font-semibold">Food Security</p>
           </div>
           <div className="text-center">
             <FaLeaf className="text-4xl text-[#1B5538] mb-2" />
-            <p className="text-gray-700 font-semibold">Renewable Energy</p>
+            <p className="text-gray-700 font-semibold">Energy Security</p>
           </div>
           <div className="text-center">
             <FaHandHoldingUsd className="text-4xl text-[#1B5538] mb-2" />
-            <p className="text-gray-700 font-semibold">Small Enterprises</p>
+            <p className="text-gray-700 font-semibold">Economic Growth</p>
           </div>
         </div>
 

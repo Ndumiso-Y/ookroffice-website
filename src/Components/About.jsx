@@ -28,104 +28,105 @@ function About() {
         <img src={getPublicImage("Officeofkgosanateams.jpeg")} alt="Office Team of Kgosana Koketso Rakhudu" className="w-full h-64 object-contain rounded-lg shadow-lg mb-8" loading="lazy" />
 
         <p className="mb-6">
-          The Office executes VisionPlan 2035 with focus areas in governance, education, economic empowerment, cultural preservation, and impact investment. Through this, it promotes transparent governance, sustainability, and ethical leadership while retaining strong community engagement through traditional Kgotla practices.
+          The Office executes VisionPlan 2035 through 10 key priorities spanning education, economic growth, health, environmental stewardship, energy, governance, infrastructure, agriculture, cultural heritage, and water security. Through this, it promotes transparent governance, sustainability, ESG-aligned development, and ethical leadership while retaining strong community engagement through traditional Kgotla practices.
         </p>
 
         <ul className="list-disc list-inside mb-6 space-y-4 text-gray-700">
           <li><strong className="text-[#1B5538]">Fostering Community Engagement:</strong> Open dialogue and inclusion via Kgotla forums reinforce grassroots participation and cultural continuity.</li>
           <li><strong className="text-[#1B5538]">Investing in Talent & Skills:</strong> Skills gap analyses and training initiatives equip youth with in-demand skills in tech, health, agriculture, and more.</li>
-          <li><strong className="text-[#1B5538]">Driving Economic Transformation:</strong> Through microfinance, entrepreneurship, and renewable energy initiatives, the Office builds sustainable local economies.</li>
+          <li><strong className="text-[#1B5538]">Driving Economic Transformation:</strong> Through enterprise development, economic diversification, and energy transition initiatives, the Office builds sustainable local economies.</li>
           <li><strong className="text-[#1B5538]">Leading with Cultural Integrity:</strong> Art, ritual, and heritage projects protect identity while embracing modern development pathways.</li>
         </ul>
 
         <section className="bg-[#F1F5F9] p-6 rounded-lg shadow-md mt-12">
           <h2 className="text-2xl font-semibold text-[#1B5538] mb-4">Strategic Vision & Frameworks</h2>
           <p className="mb-4">
-            OOKKR operates using the Singapore COMPASS Framework, which emphasizes complementarity in talent development, ensuring that foreign and local skills work synergistically. It supports sectors from mining to tourism and education to green energy—driven by results-based monitoring and continuous community feedback.
+            OOKKR applies the Singapore Governance Framework as a practical lens for capability building, institutional discipline, and results-based delivery. Its 10 key priorities align local action with Plan 2035, the SDGs, ESG principles, and Agenda 2063, guided by continuous community feedback and measurable development outcomes.
           </p>
 
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             <li>Royal Bafokeng Nation Plan 2035 alignment for long-term local prosperity</li>
             <li>National Development Plan 2030 goals including skills and job creation</li>
-            <li>UN SDGs including quality education, clean energy, and reduced inequality</li>
-            <li>Impact Investment strategies guided by sustainability and inclusivity</li>
+            <li>UN SDGs including quality education, clean energy, reduced inequality, and clean water</li>
+            <li>ESG and Agenda 2063 alignment for sustainable, inclusive African development</li>
+            <li>Impact Investment strategies guided by sustainability, accountability, and inclusivity</li>
           </ul>
         </section>
 
         <section className="mt-12">
   <h2 className="text-2xl font-semibold text-[#1B5538] mb-4">
-    Sector Priorities Overview
+    10 Key Priorities Overview
   </h2>
-  <p className="mb-6 text-gray-600">A high-level map of our focus areas:</p>
+  <p className="mb-6 text-gray-600">A high-level map of the approved priorities guiding Plan 2035 delivery:</p>
   <ol className="space-y-4 text-gray-700">
     <li className="flex items-start space-x-3">
-      <span className="text-xl">🏛️</span>
+      <span className="text-xl font-semibold text-[#1B5538]">1.</span>
       <p>
-        <span className="font-semibold">Local Government & Engagement:</span>{" "}
-        Strong leadership = better service delivery.
+        <span className="font-semibold">Education & Skills Development:</span>{" "}
+        Equipping learners, youth, and professionals with capabilities for long-term opportunity.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">📚</span>
+      <span className="text-xl font-semibold text-[#1B5538]">2.</span>
       <p>
-        <span className="font-semibold">Education & Skills:</span>{" "}
-        Closing the skills gap.
+        <span className="font-semibold">Economic Diversification & Growth:</span>{" "}
+        Broadening enterprise, investment, and employment pathways beyond a single economic base.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">💰</span>
+      <span className="text-xl font-semibold text-[#1B5538]">3.</span>
       <p>
-        <span className="font-semibold">Microfinance & Inclusion:</span>{" "}
-        Fuel for small business growth.
+        <span className="font-semibold">Health & Wellbeing:</span>{" "}
+        Strengthening access, prevention, dignity, and community wellbeing.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">💻</span>
+      <span className="text-xl font-semibold text-[#1B5538]">4.</span>
       <p>
-        <span className="font-semibold">Digital Economy:</span>{" "}
-        Tech for efficiency, innovation, and access.
+        <span className="font-semibold">Environmental Stewardship:</span>{" "}
+        Protecting land, biodiversity, and natural resources through responsible local action.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">🎨</span>
+      <span className="text-xl font-semibold text-[#1B5538]">5.</span>
       <p>
-        <span className="font-semibold">Creative Arts & Culture:</span>{" "}
-        Showcasing local heritage globally.
+        <span className="font-semibold">Energy Security & Transition:</span>{" "}
+        Advancing reliable, affordable, and cleaner energy pathways for households and enterprise.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">⛏️</span>
+      <span className="text-xl font-semibold text-[#1B5538]">6.</span>
       <p>
-        <span className="font-semibold">Mining, Construction & Logistics:</span>{" "}
-        Responsible resource use + infrastructure growth.
+        <span className="font-semibold">Good Governance & Leadership:</span>{" "}
+        Building accountable institutions, ethical leadership, and responsive service delivery.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">🌱</span>
+      <span className="text-xl font-semibold text-[#1B5538]">7.</span>
       <p>
-        <span className="font-semibold">Agriculture:</span>{" "}
-        Climate-smart farming & food security for youth.
+        <span className="font-semibold">Infrastructure & Human Settlements:</span>{" "}
+        Supporting dignified settlements, mobility, public facilities, and enabling infrastructure.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">🌍</span>
+      <span className="text-xl font-semibold text-[#1B5538]">8.</span>
       <p>
-        <span className="font-semibold">Tourism:</span>{" "}
-        Heritage + exotic experiences.
+        <span className="font-semibold">Food Security & Agriculture:</span>{" "}
+        Growing resilient food systems, local production, and climate-smart agriculture.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">⚕️</span>
+      <span className="text-xl font-semibold text-[#1B5538]">9.</span>
       <p>
-        <span className="font-semibold">Health & Sanitation:</span>{" "}
-        Better access, cleaner communities.
+        <span className="font-semibold">Social Cohesion & Cultural Heritage:</span>{" "}
+        Preserving identity, strengthening unity, and carrying heritage into future generations.
       </p>
     </li>
     <li className="flex items-start space-x-3">
-      <span className="text-xl">⚡</span>
+      <span className="text-xl font-semibold text-[#1B5538]">10.</span>
       <p>
-        <span className="font-semibold">Renewable Energy:</span>{" "}
-        Clean power for a sustainable future.
+        <span className="font-semibold">Water & Sanitation:</span>{" "}
+        Improving water security, sanitation access, and healthier community environments.
       </p>
     </li>
   </ol>

@@ -284,7 +284,7 @@ const SuccessStories = () => {
         {
         title: "2026 STATE OF KGOTLA ADDRESS | SOKA 💚🍀",
         description:
-            "The 2026 State of Kgotla Address outlined 10 Priority Sectors under Social & Human Development and Economic & Infrastructure Development. Reflecting on the 10-Year Vision Impact, over R20 million has been mobilised toward sustainable community development, with a focus on data-driven decision-making, measurable outcomes, and scalable investment models.",
+            "The 2026 State of Kgotla Address outlined the approved 10 key priorities: Education & Skills Development, Economic Diversification & Growth, Health & Wellbeing, Environmental Stewardship, Energy Security & Transition, Good Governance & Leadership, Infrastructure & Human Settlements, Food Security & Agriculture, Social Cohesion & Cultural Heritage, and Water & Sanitation. Reflecting on the 10-Year Vision Impact, over R20 million has been mobilised toward sustainable community development, with a focus on data-driven decision-making, measurable outcomes, and scalable investment models.",
         media: [
             { type: "image", src: "/images/soka-highlights/IMG_1786.jpg" },
             { type: "image", src: "/images/soka-highlights/IMG_1791.jpg" },
