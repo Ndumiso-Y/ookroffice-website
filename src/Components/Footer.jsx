@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -6,24 +5,18 @@ function Footer() {
     <footer className="bg-[#1B5538] text-white py-6 mt-12">
       <div className="container mx-auto px-6 text-center">
         <p className="mb-4 text-sm md:text-base">
-          &copy; {new Date().getFullYear()} OKKR - All Rights Reserved
+          &copy; {new Date().getFullYear()} OOKR - All Rights Reserved
         </p>
-        <p>
-          Designed with ♥ by{" "}
+        <p className="text-sm text-gray-300 mb-4">
+          Designed &amp; hosted by{" "}
           <a
-            href="https://www.astralsolution.tech/"
-            className="text-gray-300 hover:text-gray-100"
+            href="https://www.embarkdigitals.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-white underline"
           >
-            Astral Solutions --
+            Embark Digitals
           </a>
-          {" "} | Hosted by {" "}
-          <a
-            href="https://app.businesshustle.co.za/"
-            className="text-gray-300 hover:text-gray-100"
-          >
-            Business Hustle
-          </a>
-          .
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-[#397D5A]">
           <Link to="/" className="hover:text-white">Home</Link>

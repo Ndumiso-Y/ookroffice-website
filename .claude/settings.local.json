@@ -27,7 +27,13 @@
       "Bash(npm run:*)",
       "Bash(powershell.exe -Command \"Compress-Archive -Path ''build\\\\*'' -DestinationPath ''website-update.zip'' -Force\")",
       "Bash(node -e \":*)",
-      "Bash(du -sh \"d:/Digital Agency/DrKoketsoRakhudu/OOKROFFICE/Website/build/\"*)"
+      "Bash(du -sh \"d:/Digital Agency/DrKoketsoRakhudu/OOKROFFICE/Website/build/\"*)",
+      "Bash(for d:*)",
+      "Bash(do echo:*)",
+      "Read(//d/Digital Agency/DrKoketsoRakhudu/OOKROFFICE/Website/src/DivisionSites/**)",
+      "Bash(done)",
+      "Bash(npm audit:*)",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''''fs''''\\).readFileSync\\(''''/dev/stdin'''',''''utf8''''\\)\\); Object.entries\\(d.vulnerabilities||{}\\).filter\\(\\([k,v]\\)=>!k.includes\\(''''react-scripts''''\\)&&!k.includes\\(''''jest''''\\)&&!k.includes\\(''''webpack''''\\)\\).forEach\\(\\([k,v]\\)=>console.log\\(k,v.severity,v.fixAvailable\\)\\)\")"
     ]
   }
 }
