@@ -198,6 +198,48 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+        title: "Tsitsing Young Leaders at the Forefront",
+        description:
+            "Under the leadership of Ms. Keo Selloe, Executive Support: Institutional Governance in the Office of Kgosana Koketso Rakhudu, 450 young people are being equipped to lead with excellence, discipline, and purpose. This initiative represents a movement to build a generation of leaders who understand governance, own responsibility, and deliver quality, raising young people prepared to shape the future of Tsitsing.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/Tsiting young Leaders are at the forfront .jpeg" },
+            { type: "image", src: "/Impact/Whatsapp/Tsiting young Leaders are at the forfront 2.jpeg" },
+            { type: "image", src: "/Impact/Whatsapp/Tsiting young Leaders are at the forfront 3.jpeg" },
+        ],
+    },
+        {
+        title: "UNISA Engineering Partnership in Tsitsing",
+        description:
+            "Professionals from the University of South Africa's Engineering Faculty joined Tsitsing Kgotla Ya Rakhudu for a site assessment of the Tsitsing water line, supporting technical diagnosis and infrastructure planning. The engagement also included proposals for a solar-energy pilot serving 10 households and the development of an Academic Framework to guide future engineering solutions through collaboration between academia and community leadership.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/UNIVERSITY OF SOUTH AFRICA IN TSITSING - KGOTLA YA RAKHUDU.jpeg" },
+        ],
+    },
+        {
+        title: "City at Work Programme in Tsitsing",
+        description:
+            "The Rustenburg Local Municipality's City at Work Programme supported environmental clean-up efforts in Tsitsing, including clearing illegal dumping, cutting overgrown grass, attending to drainage, and restoring shared public spaces. The initiative reinforces community dignity and shared responsibility for a cleaner, healthier community environment.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/The Rustenburg Local Municipality City at Work Programme .jpeg" },
+        ],
+    },
+        {
+        title: "Kgosana Koketso Rakhudu Honoured as Subject Matter Expert",
+        description:
+            "Kgosana Koketso Rakhudu received a Certificate of Appreciation from Commissioner Joseph Ndaba in recognition of his contribution as a Subject Matter Expert at the North West NCIC Regional Awards. Presented through a partnership with the Mafikeng Digital Innovation Hub and the Technology Innovation Agency, the honour recognises his leadership and contribution to community development, innovation, entrepreneurship, and the provincial adjudication process.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/Subject Matter Expert at the NCIC North West Regional Awards..jpeg" },
+        ],
+    },
+        {
+        title: "National Youth Service Programme",
+        description:
+            "Led by Team Leader Ms Keoikantse Selloe, the National Youth Service Programme gives young participants opportunities to build skills, serve their communities, and contribute to nation building. Tsitsing Excellence Corporate Centre supports the programme's focus on youth leadership, learning, and meaningful community participation.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/The national Youth Service Programm.jpeg" },
+        ],
+    },
+        {
         title: "Advisory Council Meeting",
         description:
             "Plan 2035 for the Royal Bafokeng Nation in Tsitsing is well positioned under the stewardship of Kgosana Koketso Rakhudu and his team of experts. Their combined technical skills and strategic vision support coordinated efforts across public, private, and community sectors, strengthening the plan's ability to attract investment, deliver services, and promote equitable development.",
