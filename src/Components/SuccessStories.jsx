@@ -12,6 +12,8 @@ const SuccessStory = ({ story }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const modalRef = useRef(null);
 
+    const isFeatured = story.featuredUntil && new Date() <= new Date(story.featuredUntil);
+
     const openModalWithVideo = (videoSrc) => {
         setCurrentVideo(videoSrc);
         setIsModalOpen(true);
@@ -56,7 +58,12 @@ const SuccessStory = ({ story }) => {
     }, []);
 
     return (
-        <div className="flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full h-[450px]">
+        <div className={`relative flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full h-[450px] ${isFeatured ? 'ring-2 ring-green-700 shadow-xl' : ''}`}>
+            {isFeatured && (
+                <span className="absolute top-3 right-3 bg-green-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow z-10">
+                    Featured
+                </span>
+            )}
             {story.media ? (
                 <Swiper modules={[Navigation]} navigation className="w-full h-48 rounded-md bg-gray-100">
                     {story.media.map((item, index) =>
@@ -75,7 +82,7 @@ const SuccessStory = ({ story }) => {
                             </SwiperSlide>
                         ) : (
                             <SwiperSlide key={index}>
-                                <div className="relative w-full h-48">
+                                <div className="relative w-full h-48 bg-gray-900 rounded-md">
                                     <img
                                         src={item.thumbnail || "/images/defaultThumbnail.png"}
                                         alt="Video Thumbnail"
@@ -84,7 +91,7 @@ const SuccessStory = ({ story }) => {
                                     />
                                     <button
                                         onClick={() => openModalWithVideo(item.src)}
-                                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-md text-white text-lg"
+                                        className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-md text-white text-lg font-semibold hover:bg-opacity-40 transition-opacity"
                                     >
                                         ▶ Play Video
                                     </button>
@@ -132,13 +139,25 @@ const SuccessStory = ({ story }) => {
                             ✕
                         </button>
                         <div className="relative w-full h-80">
-                            <iframe
-                                src={currentVideo}
-                                title="Impact story video"
-                                allow="autoplay; fullscreen"
-                                allowFullScreen
-                                className="w-full h-full rounded-md"
-                            ></iframe>
+                            {currentVideo && (currentVideo.endsWith(".mp4") || currentVideo.endsWith(".webm")) ? (
+                                <video
+                                    src={currentVideo}
+                                    controls
+                                    autoPlay
+                                    playsInline
+                                    className="w-full h-full rounded-md object-contain bg-black"
+                                >
+                                    Your browser does not support the video tag.
+                                </video>
+                            ) : (
+                                <iframe
+                                    src={currentVideo}
+                                    title="Impact story video"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen
+                                    className="w-full h-full rounded-md"
+                                ></iframe>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -198,6 +217,66 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+        title: "Positioning Tsitsing for Funding, Work and Business Opportunities",
+        description:
+            "Delivering the Community Opening Address at the Rustenburg Funding, Work & Business Opportunities Summit 2026 at BON Hotel Rustenburg, Kgosana Koketso Rakhudu positioned Tsitsing for strategic enterprise and workforce partnerships. As part of the Tsitsing–Kgotla Ya Rakhudu Stakeholders Growth Plan, the address brought together government, investors, SMMEs, and community leaders to align on priority development projects, youth empowerment, and sustainable local business growth in line with Plan 2035.",
+        media: [
+            { type: "image", src: "/Impact/Facebook/The Advisory Council’s commitment1.jpg" },
+            { type: "image", src: "/Impact/Facebook/The Advisory Council’s commitment.jpg" },
+        ],
+    },
+        {
+        title: "A Fellowship of Leadership, Scholarship and Nation-Building",
+        description:
+            "Kgosana Koketso Rakhudu engaged in a high-level dialogue with His Excellency former President Thabo Mbeki, Chancellor of UNISA, and Professor Puleng LenkaBula, Vice-Chancellor and Principal of UNISA. Bringing together traditional governance, statesmanship, and academic scholarship, the engagement highlighted the vital intersection of research, public service, and institutional leadership in advancing community transformation and nation-building.",
+        featuredUntil: "2026-07-31T23:59:59+02:00",
+        media: [
+            { type: "image", src: "/Impact/Facebook/His Excellency Honourable President Thabo Mbeki,.jpg" },
+            { type: "image", src: "/Impact/Facebook/His Excellency Honourable President Thabo Mbeki2.jpg" },
+            { type: "image", src: "/Impact/Facebook/His Excellency Honourable President Thabo Mbeki3.jpg" },
+        ],
+    },
+        {
+        title: "Tsitsing and the University of the Witwatersrand Advance Community Research",
+        description:
+            "Tsitsing Excellence Corporate Centre hosted a community research session in partnership with the University of the Witwatersrand. Led by researcher Mme Kagiso Morwane, the session engaged local women in dialogue for the study 'Shifting Markers: How Unmarried Black Batswana Women Redefine Adulthood in Contemporary South Africa,' fostering ethical community research, local participation, and academic insights into contemporary identity and womanhood.",
+        media: [
+            { type: "image", src: "/Impact/Facebook/Tsitsing & University of the Witwatersrand to roll out Research..jpg" },
+        ],
+    },
+        {
+        title: "Contributing to the North West Cleantech Innovation Conversation",
+        description:
+            "The Office of Kgosana Koketso Rakhudu joined Commissioner Joseph Ndaba and regional partners at the Mahikeng Multipurpose Centre for the North West Provincial National Cleantech Innovation Challenge (NCIC) Regional Finale. Executive for ESG & Research, Mr Thabo Nakedi, represented the Office in engagements connecting traditional leadership, government, and institutional partners with cleantech innovators to advance sustainable development, green economy solutions, and community-centred innovation across the province.",
+        media: [
+            { type: "image", src: "/Impact/Facebook/Ai2.jpg" },
+            { type: "image", src: "/Impact/Facebook/Ai1.jpg" },
+        ],
+    },
+        {
+        title: "OOKKR Representatives Contributing to Global Conversations",
+        description:
+            "OOKKR representatives Ms Tumelo Khunou, Mr Paballo Maledu, Ms Mothusi Seabelo, and Mr Phemelo Ntsimane participated in global leadership conversations centered on translating strategic planning into actionable outcomes. Their engagement reflects OOKKR's commitment to connecting high-level policy dialogue with practical, community-focused implementation.",
+        media: [
+            { type: "image", src: "/Impact/Facebook/GlobalConversations2.jpg" },
+            { type: "image", src: "/Impact/Facebook/GlobalConversations1.jpg" },
+        ],
+    },
+        {
+        title: "Community Leadership Address at the Global Social Development Summit",
+        description:
+            "Kgosana Koketso Rakhudu represented Tsitsing and Kgotla Ya Rakhudu through a Community Leadership Address at the Global Social Development Summit, convened under the leadership of the Minister of Social Development. Reaffirming the pivotal role of traditional leadership in driving Plan 2035, the address emphasized placing people at the centre of growth, fostering institutional partnerships, and promoting accountability and community-led action.",
+        media: [
+            {
+                type: "video",
+                src: "/Impact/Facebook/Development without the people is not development.mp4",
+                thumbnail: "/Impact/Facebook/Development without the people is not development1.jpg"
+            },
+            { type: "image", src: "/Impact/Facebook/Development without the people is not development1.jpg" },
+            { type: "image", src: "/Impact/Facebook/Development without the people is not development2.jpg" },
+        ],
+    },
+        {
         title: "Tsitsing Young Leaders at the Forefront",
         description:
             "Under the leadership of Ms. Keo Selloe, Executive Support: Institutional Governance in the Office of Kgosana Koketso Rakhudu, 450 young people are being equipped to lead with excellence, discipline, and purpose. This initiative represents a movement to build a generation of leaders who understand governance, own responsibility, and deliver quality, raising young people prepared to shape the future of Tsitsing.",
@@ -221,6 +300,30 @@ const SuccessStories = () => {
             "The Rustenburg Local Municipality's City at Work Programme supported environmental clean-up efforts in Tsitsing, including clearing illegal dumping, cutting overgrown grass, attending to drainage, and restoring shared public spaces. The initiative reinforces community dignity and shared responsibility for a cleaner, healthier community environment.",
         media: [
             { type: "image", src: "/Impact/Whatsapp/The Rustenburg Local Municipality City at Work Programme .jpeg" },
+        ],
+    },
+        {
+        title: "Rustenburg Police Station Stakeholder Engagement",
+        description:
+            "As part of Tsitsing Kgotla Ya Rakhudu's Stakeholders Growth Plan, Kgosana Koketso Rakhudu met with the Rustenburg Police Station Commander to establish direct dialogue and institutional cooperation between traditional leadership and law enforcement. The engagement focuses on building mutual trust, enhancing crime prevention and community safety, and aligning institutional efforts to promote long-term community development and social stability.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/Rustenburg Police Station Meet And Greet with Kgosana Koketso.jpeg" },
+        ],
+    },
+        {
+        title: "Bomme Strengthening Community Through Faith and Unity",
+        description:
+            "Every month, the Bomme of Tsitsing and surrounding communities gather for dedicated prayer sessions that serve as a pillar of spiritual strength, unity, and social cohesion. Led by mothers, grandmothers, and women leaders, these ongoing gatherings foster intergenerational wisdom, uphold the spirit of ubuntu, and intercede for the wellbeing of families, youth, and the future of Kgotla Ya Rakhudu.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/Come together for a dedicated prayer session.jpeg" },
+        ],
+    },
+        {
+        title: "The Future Leads from Tsitsing",
+        description:
+            "Twenty-six young leaders from Tsitsing represent a new generation stepping forward with a shared purpose: to help shape the future of leadership in Kgotla Ya Rakhudu. Their journey reflects a commitment to developing local leadership from within the community and creating space for young people to contribute to its future.",
+        media: [
+            { type: "image", src: "/Impact/Whatsapp/The Future Leads From Tsitsing.jpeg" },
         ],
     },
         {
