@@ -5,7 +5,7 @@ import About from './Components/About';
 import VisionPlan from './Components/VisionPlan';
 import Objectives from './Components/Objectives';
 import Divisions from './Components/Divisions';
-// import Leadership from './Components/Leadership';
+import Leadership from './Components/Leadership';
 import Contact from './Components/Contact';
 import Layout from './Components/Layout';
 import Calendar from './Components/Calendar';
@@ -58,7 +58,7 @@ function App() {
               <Route path="/objectives" element={<Objectives />} />
               <Route path="/successstories" element={<SuccessStories />} />
               <Route path="/divisions" element={<Divisions />} />
-              {/* <Route path="/leadership" element={<Leadership />} /> */}
+              <Route path="/leadership" element={<Leadership />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/koketso-rakhudu-foundation" element={<KoketsoRakhuduFoundation />} />
               <Route path="/the-village-economy-indaba" element={<VillageEconomyIndaba />} />

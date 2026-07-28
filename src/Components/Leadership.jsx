@@ -1,18 +1,19 @@
 import React from 'react';
-import { getPublicImage } from '../shared/utils/assetPaths';
-import { FaHandHoldingHeart, FaUsers, FaChalkboardTeacher, FaHandsHelping } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import Carousel from './Carousel';
+import { FaHandHoldingHeart, FaUsers, FaChalkboardTeacher, FaHandsHelping } from 'react-icons/fa';
+import { getPublicImage } from '../shared/utils/assetPaths';
+import GovernanceHeader from './leadership/GovernanceHeader';
+import PortfolioCard from './leadership/PortfolioCard';
+import CommitteesSection from './leadership/CommitteesSection';
+import { PORTFOLIOS } from '../data/leadershipData';
 
 function Leadership() {
   return (
     <div className="relative min-h-screen bg-white">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top-left corner circle */}
         <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[#1B5538]/10" />
         
-        {/* Diagonal lines pattern - top right */}
         <div className="absolute top-0 right-0 w-72 h-72">
           {[...Array(8)].map((_, i) => (
             <div
@@ -26,10 +27,8 @@ function Leadership() {
           ))}
         </div>
 
-        {/* Bottom-right corner circle */}
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#1B5538]/5" />
         
-        {/* Diagonal lines pattern - bottom left */}
         <div className="absolute bottom-0 left-0 w-72 h-72">
           {[...Array(8)].map((_, i) => (
             <div
@@ -44,266 +43,130 @@ function Leadership() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-6 py-16 relative">
-        {/* Header */}
-        <motion.h1 
-          className="text-4xl font-bold mb-8 text-center text-[#1B5538]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+      {/* Main Container */}
+      <div className="container mx-auto px-4 sm:px-6 py-12 relative">
+        {/* Main Title & Subtitle */}
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-12"
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our Leadership
-        </motion.h1>
-
-        {/* Organisation organogram */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl font-semibold text-[#397D5A] mb-6 text-center">
-            Organizational Structure
-          </h2>
-          
-          {/* Executives Structure */}
-          <motion.img
-            src={getPublicImage("LeadershipStructure1.jpg")}
-            alt="Office of Kgosana Dr Koketso Rakhudu Executive Structure"
-            loading="lazy"
-            className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          />
-          
-          {/* Strategy & Business Development */}
-          <motion.img
-            src={getPublicImage("StrategyBusinessDev.jpg")}
-            alt="Strategy & Business Development Structure"
-            loading="lazy"
-            className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          />
-          
-          {/* Operations & Systems */}
-          <motion.img
-            src={getPublicImage("OperationsSystems.jpg")}
-            alt="Operations & Systems Structure"
-            loading="lazy"
-            className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          />
-          
-          {/* Finance & Compliance */}
-          <motion.img
-            src={getPublicImage("FinanceCompliance.jpg")}
-            alt="Finance & Compliance Structure"
-            loading="lazy"
-            className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          />
-          
-          {/* Programmes & Delivery */}
-          <motion.img
-            src={getPublicImage("ProgrammesDelivery.jpg")}
-            alt="Programmes & Delivery Structure"
-            loading="lazy"
-            className="mx-auto mb-8 w-full max-w-4xl h-auto object-contain rounded-lg shadow-md"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          />
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-[#1B5538] tracking-tight mb-4">
+            Leadership & Organisational Structure
+          </h1>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
+            Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu, guiding the Office through transparent governance and VisionPlan 2035.
+          </p>
         </motion.div>
 
-        {/* Intro Section */}
-        <motion.p 
-          className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Leadership is about inspiring and empowering others. Kgosana Koketso Rakhudu follows the footsteps of his father, Kgosana Rantatja Jacob Rakhudu.
-        </motion.p>
+        {/* 1. Governance Hierarchy Structure */}
+        <GovernanceHeader />
 
-        {/* Leadership and Legacy Section */}
-        <motion.section 
-          className="flex flex-col items-center mb-12 relative"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45" />
-          <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full" />
-          
-          <img
-            src={getPublicImage("KgosanaSmiling.jpeg")}
-            alt="Dr Kgosana Koketso Rakhudu"
-            loading="lazy"
-            className="w-2/3 sm:w-1/2 md:w-1/3 h-auto object-cover rounded-lg shadow-lg mb-6"
-          />
-          <h2 className="text-3xl font-semibold text-[#397D5A] mb-4 text-center">
-            Leadership and Legacy of the Office of Kgosana Dr Koketso Rakhudu
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
-            The Office of Kgosana Dr Koketso Rakhudu is rooted in a legacy of strong, visionary leadership established by Kgosana Rantatja Jacob Rakhudu, whose service was defined by integrity, humility, and a commitment to his people. Kgosana Koketso continues this legacy with a forward-thinking approach, ensuring the collective well-being of the community.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl text-center">
-            Observing his father's dedication to Tsitsing, Kgosana Koketso has adopted a style that values engagement, collaboration, and community growth. His leadership is not about authority but about creating a thriving community through purpose-driven governance.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl text-center">
-            Integrating African traditional governance with modern principles, the Office of Kgosana Dr Koketso Rakhudu encourages each community member to reach their potential through various empowerment initiatives in education, healthcare, and economic development, all contributing to VisionPlan 2035.
-          </p>
-        </motion.section>
+        {/* 2. Code-Based Organogram: 5 Functional Portfolios */}
+        <section className="mb-16">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5538] bg-[#1B5538]/10 px-3 py-1 rounded-full inline-block mb-2">
+              Functional Excellence
+            </span>
+            <h2 className="text-3xl font-extrabold text-[#1B5538]">
+              Functional Portfolios & Leadership Realignment
+            </h2>
+            <p className="text-sm text-gray-600 max-w-2xl mx-auto mt-2 leading-relaxed">
+              Structured operational portfolio architecture enabling strategic execution across governance, investment, programmes, finance, and operations.
+            </p>
+          </div>
 
-        {/* Leadership Carousel */}
-        <section className="flex flex-col items-center justify-center bg-gray-100 py-12">
-          <h2 className="text-3xl font-bold mb-8 text-[#1B5538] text-center">
-            Executive Leaders
-          </h2>
-
-          <div className="w-full max-w-4xl h-[400px] sm:w-[350px] sm:h-[500px] md:h-[550px] lg:h-[600px]">
-            <Carousel
-              slides={[
-                {
-                  image: "images/NeoS.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Neo Sikwane",
-                  description:
-                    "Personal Assistant to Dr. Koketso Rakhudu, Neo@drkoketsorakhudu.com +27 (64) 702-7504",
-                },
-                {
-                  image: "images/CalvinM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Calvin Molokwane",
-                  description:
-                    "Executive Head: Finance & Compliance. Calvin@drkoketsorakhudu.com +27 (60) 616-5450",
-                },
-                {
-                  image: "images/SereroA.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Ikgetheleng Sereo",
-                  description:
-                    "Executive Head: Strategy & Business Development. Sereo@drkoketsorakhudu.com +27 (64) 296-3705",
-                },
-                {
-                  image: "images/OntiretseM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Ontiretse Motene",
-                  description:
-                    "Executive Head: Programmes & Delivery. Ontiretse@drkoketsorakhudu.com +27 (64) 685-7101",
-                },
-                {
-                  image: "images/TsholoM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Tsholo Nape",
-                  description:
-                    "Executive Head: Operations & Systems. tsholofelo.n@drkoketsorakhudu.com +27 (82) 972-5629",
-                },
-                {
-                  image: "images/GalaletsangM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Galaletsang Mahuma",
-                  description:
-                    "Finance Manager. Galaletsang.mahuma@drkoketsorakhudu.com +27 682086466",
-                },
-                {
-                  image: "images/KeagileM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Keagile Masike",
-                  description:
-                    "Special Projects Manager. Keagile@drkoketsorakhudu.com +27 670001940",
-                },
-                {
-                  image: "images/KagoL.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Kago Lebethe",
-                  description:
-                    "Communications & Public Relations Manager. Kago.l@drkoketsorakhudu.com +27 (78) 544-1374",
-                },
-                {
-                  image: "images/KoketsoM.jpg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Koketso Moilwe",
-                  description:
-                    "Designs & Digital Communication Manager. koketso.m@drkoketsorakhudu.com +27 (63) 840-3072",
-                },
-                {
-                  image: "images/BakangM.jpeg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Bakang Maluleka",
-                  description:
-                    "Executive Head: Legal & Social Ethics. Bakang@drkoketsorakhudu.com +27 (72) 974-8644 ",
-                },
-                {
-                  image: "images/PaiMbanje.jpeg",
-                  alt: "Office of Kgosana Dr Koketso Rakhudu Executive",
-                  loading: "lazy",
-                  title: "Pai Mbanje-Kondile",
-                  description:
-                    "Executive Investments Portfolio Head. Office of Dr. Koketso Rakhudu, Royal Bafokeng Nation, Tsitsing, Kgotla ya Rakhudu",
-                },
-              ]}
-            />
+          <div className="space-y-6">
+            {PORTFOLIOS.map((portfolio, index) => (
+              <PortfolioCard key={portfolio.id} portfolio={portfolio} index={index} />
+            ))}
           </div>
         </section>
 
-        {/* Principles of Leadership Section */}
-        <h3 className="text-2xl font-semibold text-[#397D5A] mb-6 text-center mt-12">Principles of Leadership in the Office</h3>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto relative">
-          <div className="absolute -left-8 top-1/2 w-16 h-16 bg-[#1B5538]/5 rounded-full" />
-          <div className="absolute -right-8 bottom-1/4 w-12 h-12 bg-[#397D5A]/5 rotate-45" />
+        {/* 3. Kgotla Committees of Development */}
+        <CommitteesSection />
+
+        {/* 4. Leadership & Legacy Section */}
+        <motion.section 
+          className="my-16 flex flex-col items-center bg-gray-50/80 p-8 sm:p-12 rounded-2xl border border-gray-200/80 shadow-md relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="absolute -left-4 top-1/2 w-8 h-8 bg-[#1B5538]/10 rotate-45 pointer-events-none" />
+          <div className="absolute -right-4 top-1/4 w-6 h-6 bg-[#397D5A]/10 rounded-full pointer-events-none" />
           
-          {/* Principle Cards */}
-          <div className="bg-white p-6 rounded-lg shadow-md text-center backdrop-blur-sm bg-white/90">
-            <FaHandHoldingHeart className="text-[#1B5538] text-4xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-[#1B5538] mb-2">Purpose-Driven Governance</h4>
-            <p className="text-gray-700">
-              Governance is about fostering opportunities for individuals to find their roles within the community, creating a shared sense of purpose.
+          <div className="relative mb-8 group">
+            <div className="p-2 rounded-3xl bg-gradient-to-tr from-[#1B5538] via-[#397D5A] to-[#D4AF37] shadow-2xl group-hover:scale-105 transition-transform duration-500 ease-out">
+              <img
+                src={getPublicImage("leadership/koketso_rakhudu.jpeg")}
+                alt="Dr Kgosana Koketso Rakhudu"
+                loading="lazy"
+                className="w-56 h-56 sm:w-72 sm:h-72 object-cover rounded-2xl shadow-inner"
+                style={{ objectPosition: "center 20%" }}
+              />
+            </div>
+            <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#1B5538] via-[#2D6C4B] to-[#1B5538] text-[#F3EFE0] text-xs uppercase tracking-widest font-black px-5 py-1.5 rounded-full whitespace-nowrap shadow-xl border border-[#D4AF37]/50">
+              Institutional Leader & Kgosana
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#397D5A] mb-4 text-center">
+            Leadership and Legacy of the Office of Kgosana Dr Koketso Rakhudu
+          </h2>
+          <div className="space-y-4 max-w-3xl text-center text-gray-700 text-base leading-relaxed">
+            <p>
+              The Office of Kgosana Dr Koketso Rakhudu is rooted in a legacy of strong, visionary leadership established by Kgosana Rantatja Jacob Rakhudu, whose service was defined by integrity, humility, and a commitment to his people. Kgosana Koketso continues this legacy with a forward-thinking approach, ensuring the collective well-being of the community.
+            </p>
+            <p>
+              Observing his father's dedication to Tsitsing, Kgosana Koketso has adopted a style that values engagement, collaboration, and community growth. His leadership is not about authority but about creating a thriving community through purpose-driven governance.
+            </p>
+            <p>
+              Integrating African traditional governance with modern principles, the Office of Kgosana Dr Koketso Rakhudu encourages each community member to reach their potential through various empowerment initiatives in education, healthcare, and economic development, all contributing to VisionPlan 2035.
             </p>
           </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center backdrop-blur-sm bg-white/90">
-            <FaUsers className="text-[#1B5538] text-4xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-[#1B5538] mb-2">Engagement and Inclusivity</h4>
-            <p className="text-gray-700">
-              Through regular Kgotla sessions, the Office makes collective, transparent decisions that reflect the voices of all community members.
-            </p>
+        </motion.section>
+
+        {/* 5. Principles of Leadership */}
+        <section className="mt-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#397D5A] mb-8 text-center">
+            Principles of Leadership in the Office
+          </h3>
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto relative">
+            <div className="bg-white p-6 rounded-xl border border-gray-200/90 shadow-md text-center">
+              <FaHandHoldingHeart className="text-[#1B5538] text-4xl mb-4 mx-auto" />
+              <h4 className="text-xl font-bold text-[#1B5538] mb-2">Purpose-Driven Governance</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Governance is about fostering opportunities for individuals to find their roles within the community, creating a shared sense of purpose.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl border border-gray-200/90 shadow-md text-center">
+              <FaUsers className="text-[#1B5538] text-4xl mb-4 mx-auto" />
+              <h4 className="text-xl font-bold text-[#1B5538] mb-2">Engagement and Inclusivity</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Through regular Kgotla sessions, the Office makes collective, transparent decisions that reflect the voices of all community members.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl border border-gray-200/90 shadow-md text-center">
+              <FaChalkboardTeacher className="text-[#1B5538] text-4xl mb-4 mx-auto" />
+              <h4 className="text-xl font-bold text-[#1B5538] mb-2">Empowerment and Capacity Building</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                The Office is committed to education, training, and leadership development, preparing future generations to carry forward the legacy of progress.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl border border-gray-200/90 shadow-md text-center">
+              <FaHandsHelping className="text-[#1B5538] text-4xl mb-4 mx-auto" />
+              <h4 className="text-xl font-bold text-[#1B5538] mb-2">Community Commitment</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Leadership is seen as service. The Office supports the community with health initiatives, social welfare programs, and comprehensive resources that address local needs.
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center backdrop-blur-sm bg-white/90">
-            <FaChalkboardTeacher className="text-[#1B5538] text-4xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-[#1B5538] mb-2">Empowerment and Capacity Building</h4>
-            <p className="text-gray-700">
-              The Office is committed to education, training, and leadership development, preparing future generations to carry forward the legacy of progress.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center backdrop-blur-sm bg-white/90">
-            <FaHandsHelping className="text-[#1B5538] text-4xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-[#1B5538] mb-2">Community Commitment</h4>
-            <p className="text-gray-700">
-              Leadership is seen as service. The Office supports the community with health initiatives, social welfare programs, and comprehensive resources that address local needs.
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );
