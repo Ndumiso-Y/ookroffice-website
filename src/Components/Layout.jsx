@@ -12,7 +12,7 @@ function Layout({ children }) {
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setLoading(false);
-      const alreadySeen = sessionStorage.getItem('ookr_popup_shown');
+      const alreadySeen = sessionStorage.getItem('ookr_popup_shown') || sessionStorage.getItem('ookkr-leadership-breakfast-popup-2026');
       if (!alreadySeen) {
         const popupTimer = setTimeout(() => {
           setShowVideo(true);

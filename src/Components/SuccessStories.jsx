@@ -217,6 +217,17 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+        title: "Kgosana Koketso Rakhudu Leadership Breakfast",
+        description:
+            "The Kgosana Koketso Rakhudu Leadership Breakfast brought together leaders, stakeholders, and change-makers around a shared commitment to the growth and dignity of the Royal Bafokeng Nation in Tsitsing. The engagement created space to align on values, strengthen strategic direction, and reaffirm a model of leadership rooted in service, accountability, and Plan 2035.",
+        media: [
+            {
+                type: "video",
+                src: "/Impact/Whatsapp/TheKgosanaKoketsoRakhuduLeadershipBreakfast.mp4"
+            }
+        ],
+    },
+        {
         title: "Positioning Tsitsing for Funding, Work and Business Opportunities",
         description:
             "Delivering the Community Opening Address at the Rustenburg Funding, Work & Business Opportunities Summit 2026 at BON Hotel Rustenburg, Kgosana Koketso Rakhudu positioned Tsitsing for strategic enterprise and workforce partnerships. As part of the Tsitsing–Kgotla Ya Rakhudu Stakeholders Growth Plan, the address brought together government, investors, SMMEs, and community leaders to align on priority development projects, youth empowerment, and sustainable local business growth in line with Plan 2035.",
