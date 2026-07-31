@@ -61,12 +61,12 @@ export const PEOPLE = {
     initials: "MM",
     bio: "PR and Executive Communications specialist driving strategic messaging and institutional public relations."
   },
-  mogomotsi_motlhabae: {
-    id: "mogomotsi_motlhabae",
-    name: "Mr Mogomotsi Motlhabae",
+  larry_tau: {
+    id: "larry_tau",
+    name: "Mr Larry Tau",
     title: "HOD — Programmes & Partnerships",
-    image: "leadership/mogomotsi_motlhabae.jpeg",
-    bio: "Head of Department leading programme delivery, implementation, and strategic partnerships."
+    image: "leadership/larry_tau.jpeg",
+    bio: "Head of Department leading programme delivery, implementation, institutional governance, and strategic partnerships."
   },
   keo_selloe: {
     id: "keo_selloe",
@@ -215,7 +215,7 @@ export const PORTFOLIOS = [
       {
         id: "programmes-partnerships",
         title: "Programmes & Partnerships",
-        head: { person: PEOPLE.mogomotsi_motlhabae, role: "HOD — Programmes & Partnerships" },
+        head: { person: PEOPLE.larry_tau, role: "HOD — Programmes & Partnerships" },
         members: [
           PEOPLE.keo_selloe,
           PEOPLE.tumelo_khunou,
@@ -234,7 +234,8 @@ export const PORTFOLIOS = [
           PEOPLE.keo_selloe,
           PEOPLE.phemelo_ntsimane,
           PEOPLE.sydney_issacs,
-          PEOPLE.gomolemo_maselo
+          PEOPLE.gomolemo_maselo,
+          PEOPLE.larry_tau
         ]
       },
       {
@@ -293,7 +294,8 @@ export const PORTFOLIOS = [
       { person: PEOPLE.sydney_issacs, role: "Team Member" },
       { person: PEOPLE.brian_rapoo, role: "Team Member" },
       { person: PEOPLE.gomolemo_maselo, role: "Team Member" },
-      { person: PEOPLE.thabo_nakedi, role: "Team Member" }
+      { person: PEOPLE.thabo_nakedi, role: "Team Member" },
+      { person: PEOPLE.larry_tau, role: "Team Member" }
     ]
   }
 ];
