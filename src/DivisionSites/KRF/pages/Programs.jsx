@@ -470,7 +470,7 @@ export default function Programs() {
         </p>
         <p>
           <span className="font-semibold text-charcoal">
-            Community Education & Training Centre · Maile Kopman · +27 63 644 5723 · Dumela@drkoketsorakhudu.com
+            Community Education & Training Centre · Maile Kopman · (060) 993-7893 · Dumela@drkoketsorakhudu.com
           </span>{" "}
           · www.drkoketsorakhudufoundation.com
         </p>

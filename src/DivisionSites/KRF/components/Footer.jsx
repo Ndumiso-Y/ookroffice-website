@@ -29,7 +29,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold tracking-wide text-gold">Contact</h4>
             <p className="mt-3 text-sm">
               Maile, Kopman Center<br />
-              +27 63 644 5723<br />
+              <a href="tel:+27609937893" className="hover:text-gold">(060) 993-7893</a><br />
               <a href="mailto:Dumela@drkoketsorakhudu.com" className="hover:text-gold">
                 Dumela@drkoketsorakhudu.com
               </a>

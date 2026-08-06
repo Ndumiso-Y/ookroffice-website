@@ -44,11 +44,11 @@ export default function About() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-6 animate-fade-in-up animation-delay-400">
-          <a href="tel:+27636445723" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white shadow-lg shadow-black/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border border-gray-200">
+          <a href="tel:+27609937893" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white shadow-lg shadow-black/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border border-gray-200">
             <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span className="font-semibold text-charcoal">+27 63 644 5723</span>
+            <span className="font-semibold text-charcoal">(060) 993-7893</span>
           </a>
           <a href="mailto:Dumela@drkoketsorakhudu.com" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white shadow-lg shadow-black/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border border-gray-200">
             <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -395,7 +395,7 @@ export default function About() {
           <p className="flex items-center justify-center gap-4 flex-wrap">
             <span className="inline-flex items-center gap-2 font-semibold text-charcoal">
               <PhoneIcon className="w-4 h-4 text-gold" />
-              +27 63 644 5723
+              (060) 993-7893
             </span>
             <span>·</span>
             <span className="inline-flex items-center gap-2 font-semibold text-charcoal">

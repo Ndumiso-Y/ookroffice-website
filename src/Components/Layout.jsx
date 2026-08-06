@@ -12,7 +12,7 @@ function Layout({ children }) {
   useEffect(() => {
     const loadTimer = setTimeout(() => {
       setLoading(false);
-      const alreadySeen = sessionStorage.getItem('ookr_popup_shown') || sessionStorage.getItem('ookkr-leadership-breakfast-popup-2026');
+      const alreadySeen = sessionStorage.getItem('ookr_popup_shown');
       if (!alreadySeen) {
         const popupTimer = setTimeout(() => {
           setShowVideo(true);
@@ -39,7 +39,7 @@ function Layout({ children }) {
           <CookieBanner />
           {/* WhatsApp floating button */}
           <a
-            href="https://wa.me/27636445723"
+            href="https://wa.me/27609937893"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"

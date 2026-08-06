@@ -84,10 +84,14 @@ const SuccessStory = ({ story }) => {
                             <SwiperSlide key={index}>
                                 <div className="relative w-full h-48 bg-gray-900 rounded-md">
                                     <img
-                                        src={item.thumbnail || "/images/defaultThumbnail.png"}
+                                        src={item.thumbnail || "/images/KgosanaLogo.png"}
                                         alt="Video Thumbnail"
                                         loading="lazy"
                                         className="w-full h-48 object-contain rounded-md"
+                                        onError={(e) => {
+                                            e.target.onerror = null;
+                                            e.target.src = "/images/KgosanaLogo.png";
+                                        }}
                                     />
                                     <button
                                         onClick={() => openModalWithVideo(item.src)}
@@ -217,13 +221,41 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+            title: "Community Public-Private Partnership Engagement",
+            description: "The Office of Kgosana Koketso Rakhudu advanced its Community Public-Private Partnership Framework through an engagement with Mr Jabulani Ndlovu, Managing Director of Netcare FernCrest Private Hospital and an Advisory Board Member of the Office. The framework, introduced by Kgosana Koketso Rakhudu at Georgia State University, brings together traditional leadership, academia, and the private sector in support of practical community development. The engagement reflects Tsitsing’s Smart-Led Village vision, connecting governance, healthcare, institutional expertise, and service to the community.",
+            media: [
+                { type: "image", src: "/Impact/Facebook/COMMUNITY PUBLIC PRIVATE PARTNERSHIP ENGAGEMENT.jpg" }
+            ],
+        },
+        {
+            title: "Strengthening the Tsitsing Primary School Model",
+            description: "Kgosana Koketso Rakhudu led a monitoring and evaluation engagement involving 26 young people supporting Tsitsing Primary School through extra-curricular activities. The initiative reflects the Tsitsing Primary School Model, which brings together youth leadership, community participation, and structured support for teaching and learning. By strengthening the role of young people in the school environment, the model seeks to build a more supportive foundation in which learners have greater opportunity to participate, develop, and thrive.",
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/Facebook/Kgosana Koketso Rakhudu led the Monitoring and Evaluation of 26 young.mp4",
+                    thumbnail: "/images/KgosanaLogo.png"
+                }
+            ],
+        },
+        {
+            title: "Building Youth Opportunity Pathways with Harambee",
+            description: "Ms Tumelo Khunou, HOD Community Development, and Mr Phemelo Ntsimane, HOD Administration & Operations, held a strategic engagement with Harambee Youth Employment Accelerator in Braamfontein. The engagement formed part of Tsitsing, Kgotla Ya Rakhudu’s work to build partnerships that can strengthen skills development, employment pathways, and youth opportunity. Under the leadership of Kgosana Koketso Rakhudu, the initiative reflects a continued focus on connecting young people with institutions capable of supporting practical routes into learning, work, and development.",
+            media: [
+                { type: "image", src: "/Impact/Facebook/Doors Are Opening for Tsitsing Community3.jpg" },
+                { type: "image", src: "/Impact/Facebook/Doors Are Opening for Tsitsing Community1.jpg" },
+                { type: "image", src: "/Impact/Facebook/Doors Are Opening for Tsitsing Community2.jpg" }
+            ],
+        },
+        {
         title: "Kgosana Koketso Rakhudu Leadership Breakfast",
         description:
             "The Kgosana Koketso Rakhudu Leadership Breakfast brought together leaders, stakeholders, and change-makers around a shared commitment to the growth and dignity of the Royal Bafokeng Nation in Tsitsing. The engagement created space to align on values, strengthen strategic direction, and reaffirm a model of leadership rooted in service, accountability, and Plan 2035.",
         media: [
             {
                 type: "video",
-                src: "/Impact/Whatsapp/TheKgosanaKoketsoRakhuduLeadershipBreakfast.mp4"
+                src: "/Impact/Whatsapp/TheKgosanaKoketsoRakhuduLeadershipBreakfast.mp4",
+                thumbnail: "/images/KgosanaLogo.png"
             }
         ],
     },

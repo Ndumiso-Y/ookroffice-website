@@ -167,7 +167,7 @@ export default function Approach() {
         </p>
         <p>
           <span className="font-semibold text-charcoal">
-            +27 63 644 5723 · Dumela@drkoketsorakhudu.com
+            (060) 993-7893 · Dumela@drkoketsorakhudu.com
           </span>{" "}
           · www.drkoketsorakhudufoundation.com
         </p>
