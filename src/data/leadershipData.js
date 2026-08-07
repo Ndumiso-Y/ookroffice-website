@@ -194,7 +194,7 @@ export const PORTFOLIOS = [
     leadershipRole: "HOD — Strategy & Business Development",
     keyMembers: [
       { person: PEOPLE.neo_sikwane, role: "Executive Assistant" },
-      { person: PEOPLE.thabo_nakedi, role: "Executive Support — ESG & Research" },
+      { person: PEOPLE.thabo_nakedi, role: "Executive Head" },
       { person: PEOPLE.matshepo_molotsi, role: "PR & Executive Communications" }
     ]
   },
@@ -241,7 +241,7 @@ export const PORTFOLIOS = [
       {
         id: "community-development",
         title: "Community Development",
-        head: { person: PEOPLE.tumelo_khunou, role: "HOD — Community Development" },
+        head: { person: PEOPLE.tumelo_khunou, role: "Executive Head — Community Development" },
         members: [
           PEOPLE.mothusi_seabelo,
           PEOPLE.galaletsang_mahuma,

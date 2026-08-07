@@ -67,8 +67,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-coffeeOrange mb-1">Phone</p>
-                      <a href="tel:+27609937893" className="text-lg font-semibold text-charcoal hover:text-coffeeOrange transition-colors duration-200">
-                        (060) 993-7893
+                      <a href="tel:+27636445723" className="text-lg font-semibold text-charcoal hover:text-coffeeOrange transition-colors duration-200">
+                        +27 63 644 5723
                       </a>
                     </div>
                   </div>

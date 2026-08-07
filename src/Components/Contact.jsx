@@ -81,15 +81,15 @@ function Contact() {
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Office Phone</h3>
-              <a href="tel:+27609937893" className="text-[#397D5A] hover:text-[#1B5538] transition-colors font-medium">
-                (060) 993-7893
+              <a href="tel:+27636445723" className="text-[#397D5A] hover:text-[#1B5538] transition-colors font-medium">
+                063 644 5723
               </a>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <FaPhoneAlt className="text-[#397D5A] text-2xl mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Direct Line</h3>
-              <a href="tel:+27829481438" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
-                +27 82 948 1438
+              <a href="tel:+27609937893" className="text-[#397D5A] hover:text-[#1B5538] transition-colors">
+                060 993 7893
               </a>
             </div>
           </div>

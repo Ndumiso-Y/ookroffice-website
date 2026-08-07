@@ -143,13 +143,15 @@ const KgosanaKoketsoRakhuduProfile = () => {
               Phone
             </h3>
             <p className="text-center text-gray-600">
-              <a href="tel:+27609937893" className="hover:underline">
-                (060) 993-7893
+              <span className="font-semibold block text-sm text-[#1B5538]">Office Phone</span>
+              <a href="tel:+27636445723" className="hover:underline">
+                063 644 5723
               </a>
             </p>
-            <p className="text-center text-gray-600">
-              <a href="tel:+27829481438" className="hover:underline">
-                +27 (82) 948-1438
+            <p className="text-center text-gray-600 mt-2">
+              <span className="font-semibold block text-sm text-[#1B5538]">Direct Line</span>
+              <a href="tel:+27609937893" className="hover:underline">
+                060 993 7893
               </a>
             </p>
           </motion.div>

@@ -221,6 +221,26 @@ const SuccessStory = ({ story }) => {
 const SuccessStories = () => {
     const stories = [
         {
+            title: "CEO’s Breakfast at St Michael’s Primary School",
+            description: "The CEO’s Breakfast at St Michael’s Primary School brought together mentorship, recognition and strategic support around a shared investment in the next generation. The engagement celebrated academic excellence while reinforcing the importance of leadership, discipline, dignity and opportunity. By creating spaces in which learners are recognised and encouraged to see beyond their circumstances, the initiative reflects a broader commitment to developing confident young people equipped to shape their future.",
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/CEO BREAKFAST/ceo-breakfast-st-michaels.mp4",
+                    thumbnail: "/Impact/CEO BREAKFAST/DSC00746.jpg"
+                },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00764.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00770.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00788.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00799.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00809.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00815.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00826.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC00871.jpg" },
+                { type: "image", src: "/Impact/CEO BREAKFAST/DSC02232.jpg" }
+            ],
+        },
+        {
             title: "Community Public-Private Partnership Engagement",
             description: "The Office of Kgosana Koketso Rakhudu advanced its Community Public-Private Partnership Framework through an engagement with Mr Jabulani Ndlovu, Managing Director of Netcare FernCrest Private Hospital and an Advisory Board Member of the Office. The framework, introduced by Kgosana Koketso Rakhudu at Georgia State University, brings together traditional leadership, academia, and the private sector in support of practical community development. The engagement reflects Tsitsing’s Smart-Led Village vision, connecting governance, healthcare, institutional expertise, and service to the community.",
             media: [
@@ -240,7 +260,7 @@ const SuccessStories = () => {
         },
         {
             title: "Building Youth Opportunity Pathways with Harambee",
-            description: "Ms Tumelo Khunou, HOD Community Development, and Mr Phemelo Ntsimane, HOD Administration & Operations, held a strategic engagement with Harambee Youth Employment Accelerator in Braamfontein. The engagement formed part of Tsitsing, Kgotla Ya Rakhudu’s work to build partnerships that can strengthen skills development, employment pathways, and youth opportunity. Under the leadership of Kgosana Koketso Rakhudu, the initiative reflects a continued focus on connecting young people with institutions capable of supporting practical routes into learning, work, and development.",
+            description: "Ms Tumelo Khunou, Executive Head — Community Development, and Mr Phemelo Ntsimane, HOD Administration & Operations, held a strategic engagement with Harambee Youth Employment Accelerator in Braamfontein. The engagement formed part of Tsitsing, Kgotla Ya Rakhudu’s work to build partnerships that can strengthen skills development, employment pathways, and youth opportunity. Under the leadership of Kgosana Koketso Rakhudu, the initiative reflects a continued focus on connecting young people with institutions capable of supporting practical routes into learning, work, and development.",
             media: [
                 { type: "image", src: "/Impact/Facebook/Doors Are Opening for Tsitsing Community3.jpg" },
                 { type: "image", src: "/Impact/Facebook/Doors Are Opening for Tsitsing Community1.jpg" },
@@ -290,7 +310,7 @@ const SuccessStories = () => {
         {
         title: "Contributing to the North West Cleantech Innovation Conversation",
         description:
-            "The Office of Kgosana Koketso Rakhudu joined Commissioner Joseph Ndaba and regional partners at the Mahikeng Multipurpose Centre for the North West Provincial National Cleantech Innovation Challenge (NCIC) Regional Finale. Executive for ESG & Research, Mr Thabo Nakedi, represented the Office in engagements connecting traditional leadership, government, and institutional partners with cleantech innovators to advance sustainable development, green economy solutions, and community-centred innovation across the province.",
+            "The Office of Kgosana Koketso Rakhudu joined Commissioner Joseph Ndaba and regional partners at the Mahikeng Multipurpose Centre for the North West Provincial National Cleantech Innovation Challenge (NCIC) Regional Finale. Executive Head, Mr Thabo Nakedi, represented the Office in engagements connecting traditional leadership, government, and institutional partners with cleantech innovators to advance sustainable development, green economy solutions, and community-centred innovation across the province.",
         media: [
             { type: "image", src: "/Impact/Facebook/Ai2.jpg" },
             { type: "image", src: "/Impact/Facebook/Ai1.jpg" },
@@ -753,20 +773,81 @@ const SuccessStories = () => {
     },
     ];
 
+    const impactVideos = stories.filter(story => story.media && story.media.some(m => m.type === "video"));
+    const frameworksReports = [];
+
      return (
-        <section className="py-12 bg-gray-100">
-            <div className="container mx-auto text-center mb-8">
-                <h2 className="text-3xl font-semibold text-green-700">Impact Journey</h2>
-                <p className="text-gray-600 mt-2">
-                    Discover inspiring stories from our community members who have achieved remarkable milestones.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-                {stories.map((story, index) => (
-                    <SuccessStory key={index} story={story} />
-                ))}
-            </div>
-        </section>
+        <div className="w-full">
+            {/* Impact Journey Section */}
+            <section className="py-12 bg-gray-100">
+                <div className="container mx-auto text-center mb-8">
+                    <h2 className="text-3xl font-semibold text-green-700">Impact Journey</h2>
+                    <p className="text-gray-600 mt-2">
+                        Discover inspiring stories from our community members who have achieved remarkable milestones.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+                    {stories.map((story, index) => (
+                        <SuccessStory key={index} story={story} />
+                    ))}
+                </div>
+            </section>
+
+            {/* Impact Videos Section */}
+            <section id="impact-videos" className="py-12 bg-white">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-3xl font-semibold text-green-700 text-center mb-8">Impact Videos</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {impactVideos.map((story, index) => {
+                            const videoMedia = story.media.find(m => m.type === "video");
+                            return (
+                                <div key={index} className="bg-gray-50 rounded-lg shadow p-4 hover:shadow-lg transition-shadow">
+                                    <div className="relative w-full h-48 bg-black rounded-md overflow-hidden mb-4">
+                                        <video
+                                            controls
+                                            playsInline
+                                            preload="metadata"
+                                            poster={videoMedia.thumbnail || "/images/KgosanaLogo.png"}
+                                            className="w-full h-full object-contain"
+                                            onError={(e) => {
+                                                e.target.poster = "/images/KgosanaLogo.png";
+                                            }}
+                                        >
+                                            <source src={videoMedia.src} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <h3 className="font-semibold text-lg text-green-800 line-clamp-2">{story.title}</h3>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* OOKKR Frameworks & Reports Section */}
+            <section id="frameworks" className="py-12 bg-gray-100">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-3xl font-semibold text-green-700 text-center mb-8">OOKKR Frameworks & Reports</h2>
+                    {frameworksReports.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {/* Render items here when available */}
+                        </div>
+                    ) : (
+                        <div className="max-w-3xl mx-auto text-center bg-white p-10 rounded-xl shadow-sm border border-gray-100">
+                            <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                            </div>
+                            <p className="text-gray-600 text-lg font-medium">
+                                Frameworks and reports will be published here as they become available.
+                            </p>
+                        </div>
+                    )}
+                </div>
+            </section>
+        </div>
     );
 };
 

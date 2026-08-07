@@ -12,6 +12,8 @@ import {
   FaTrophy,
   FaChevronDown,
   FaChevronUp,
+  FaVideo,
+  FaFolderOpen
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
 import ResponsiveLogo from './ResponsiveLogo';
@@ -37,6 +39,8 @@ const Navbar = () => {
     { icon: <FaSeedling className="w-5 h-5" />, text: "VisionPlan 2035", path: "/vision-plan" },
     { icon: <FaBullseye className="w-5 h-5" />, text: "Objectives", path: "/objectives" },
     { icon: <FaTrophy className="w-5 h-5" />, text: "Impact Journey", path: "/successstories" },
+    { icon: <FaVideo className="w-5 h-5" />, text: "Impact Videos", path: "/successstories#impact-videos" },
+    { icon: <FaFolderOpen className="w-5 h-5" />, text: "Frameworks & Reports", path: "/successstories#frameworks" },
     { icon: <FaUserTie className="w-5 h-5" />, text: "Leadership", path: "/leadership" },
     { icon: <FaEnvelope className="w-5 h-5" />, text: "Contact", path: "/contact" }
   ];

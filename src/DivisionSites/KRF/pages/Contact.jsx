@@ -84,8 +84,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-charcoal mb-1">Phone</h3>
-                <a href="tel:+27609937893" className="text-gold hover:underline font-medium">
-                  (060) 993-7893
+                <a href="tel:+27636445723" className="text-gold hover:underline font-medium">
+                  +27 63 644 5723
                 </a>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function Contact() {
         </p>
         <p>
           <span className="font-semibold text-charcoal">
-            Community Education & Training Centre · Maile Kopman · (060) 993-7893 · Dumela@drkoketsorakhudu.com
+            Community Education & Training Centre · Maile Kopman · +27 63 644 5723 · Dumela@drkoketsorakhudu.com
           </span>{" "}
           · www.drkoketsorakhudufoundation.com
         </p>

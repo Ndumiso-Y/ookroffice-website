@@ -348,7 +348,7 @@ export default function Impact() {
         </p>
         <p>
           <span className="font-semibold text-charcoal">
-            (060) 993-7893 · Dumela@drkoketsorakhudu.com
+            +27 63 644 5723 · Dumela@drkoketsorakhudu.com
           </span>{" "}
           · www.drkoketsorakhudufoundation.com
         </p>
