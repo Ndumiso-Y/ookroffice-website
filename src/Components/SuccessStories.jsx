@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -219,7 +220,65 @@ const SuccessStory = ({ story }) => {
 };
 
 const SuccessStories = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+            }
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }, [location]);
+
     const stories = [
+        {
+            title: "Tantana Primary School Grade 7 CEO Breakfast",
+            description: "The Tantana Primary School Grade 7 CEO Breakfast brought together education, business and community leadership around the development of future leaders. Hosted by Principal Ms Lesego Kgwadibana, the engagement featured CEO Mr Kagiso Dibotelo in partnership with Kgosana Koketso Rakhudu and introduced Grade 7 learners to themes of academic excellence, entrepreneurial thinking, mentorship and character development. Through the Business & Academic Development Framework, the initiative created a platform for learners to engage with practical leadership principles, goal-setting and the relationship between education, opportunity and service.",
+            media: [
+                { type: "image", src: "/Impact/Tantana Primary/LRK04432.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04155.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04237.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04251.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04273.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04317.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04343.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04363.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04408.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04419.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04428.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04488.jpg" },
+                { type: "image", src: "/Impact/Tantana Primary/LRK04494.jpg" }
+            ],
+        },
+        {
+            title: "Leaders Aren’t Born. They’re Built.",
+            description: "Kgosana Koketso Rakhudu’s leadership philosophy places intentional development at the centre of building future leaders. Through education, mentorship, discipline and service, the Office continues to create environments in which young people are encouraged to develop character, vision and purpose.",
+            videoOnly: true,
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/Whatsapp/Leaders aren't born. They're built.mp4",
+                    thumbnail: "/Impact/Whatsapp/thumb_leaders_arent_born.jpg"
+                }
+            ],
+        },
+        {
+            title: "Building Leaders, One Breakfast at a Time",
+            description: "Through school-based leadership engagements, the Office of Kgosana Koketso Rakhudu brings together executives, community leaders, learners and educators to make leadership visible and values practical. The initiative emphasises Innovation, Respect, Integrity and Communication while exposing young people to leadership through direct engagement, mentorship and example.",
+            videoOnly: true,
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/Whatsapp/Noka Ya Lerato.mp4",
+                    thumbnail: "/Impact/Whatsapp/thumb_noka_ya_lerato.jpg"
+                }
+            ],
+        },
         {
             title: "CEO’s Breakfast at St Michael’s Primary School",
             description: "The CEO’s Breakfast at St Michael’s Primary School brought together mentorship, recognition and strategic support around a shared investment in the next generation. The engagement celebrated academic excellence while reinforcing the importance of leadership, discipline, dignity and opportunity. By creating spaces in which learners are recognised and encouraged to see beyond their circumstances, the initiative reflects a broader commitment to developing confident young people equipped to shape their future.",
@@ -227,7 +286,7 @@ const SuccessStories = () => {
                 {
                     type: "video",
                     src: "/Impact/CEO BREAKFAST/ceo-breakfast-st-michaels.mp4",
-                    thumbnail: "/Impact/CEO BREAKFAST/DSC00746.jpg"
+                    thumbnail: "/Impact/CEO BREAKFAST/thumb_ceo_breakfast.jpg"
                 },
                 { type: "image", src: "/Impact/CEO BREAKFAST/DSC00764.jpg" },
                 { type: "image", src: "/Impact/CEO BREAKFAST/DSC00770.jpg" },
@@ -250,11 +309,12 @@ const SuccessStories = () => {
         {
             title: "Strengthening the Tsitsing Primary School Model",
             description: "Kgosana Koketso Rakhudu led a monitoring and evaluation engagement involving 26 young people supporting Tsitsing Primary School through extra-curricular activities. The initiative reflects the Tsitsing Primary School Model, which brings together youth leadership, community participation, and structured support for teaching and learning. By strengthening the role of young people in the school environment, the model seeks to build a more supportive foundation in which learners have greater opportunity to participate, develop, and thrive.",
+            videoOnly: true,
             media: [
                 {
                     type: "video",
                     src: "/Impact/Facebook/Kgosana Koketso Rakhudu led the Monitoring and Evaluation of 26 young.mp4",
-                    thumbnail: "/images/KgosanaLogo.png"
+                    thumbnail: "/Impact/Facebook/thumb_strengthening_tsitsing.jpg"
                 }
             ],
         },
@@ -271,11 +331,12 @@ const SuccessStories = () => {
         title: "Kgosana Koketso Rakhudu Leadership Breakfast",
         description:
             "The Kgosana Koketso Rakhudu Leadership Breakfast brought together leaders, stakeholders, and change-makers around a shared commitment to the growth and dignity of the Royal Bafokeng Nation in Tsitsing. The engagement created space to align on values, strengthen strategic direction, and reaffirm a model of leadership rooted in service, accountability, and Plan 2035.",
+        videoOnly: true,
         media: [
             {
                 type: "video",
                 src: "/Impact/Whatsapp/TheKgosanaKoketsoRakhuduLeadershipBreakfast.mp4",
-                thumbnail: "/images/KgosanaLogo.png"
+                thumbnail: "/Impact/Whatsapp/thumb_leadership_breakfast.jpg"
             }
         ],
     },
@@ -692,7 +753,7 @@ const SuccessStories = () => {
             { type: "image", src: "/images/TVEICptStakeholders.jpeg" },
             { type: "image", src: "/images/TVEICPTTeam.jpeg" },
             { type: "image", src: "/images/TVEICPT1.jpeg" },
-            { type: "video", src: "https://youtube.com/shorts/MLEizOe5sQs?feature=share", thumbnail: "/images/TVEILogo.png" },
+            { type: "video", src: "https://www.youtube.com/embed/MLEizOe5sQs", thumbnail: "/images/TVEILogo.png" },
             { type: "image", src: "/images/TVEICptSB.jpg" },
         ],
     },
@@ -748,7 +809,7 @@ const SuccessStories = () => {
             { type: "image", src: "/images/TVEIRTB.jpg" },
             {
                 type: "video",
-                src: "https://drive.google.com/uc?export=download&id=1zVxBsaVYQH-pSe8naFzqryoF-7IZktOh",
+                src: "https://drive.google.com/file/d/1zVxBsaVYQH-pSe8naFzqryoF-7IZktOh/preview",
                 thumbnail: "/images/TVEILogo.png",
             },
         ],
@@ -776,6 +837,15 @@ const SuccessStories = () => {
     const impactVideos = stories.filter(story => story.media && story.media.some(m => m.type === "video"));
     const frameworksReports = [];
 
+    const handlePlay = (e) => {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            if (video !== e.target) {
+                video.pause();
+            }
+        });
+    };
+
      return (
         <div className="w-full">
             {/* Impact Journey Section */}
@@ -787,9 +857,14 @@ const SuccessStories = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-                    {stories.map((story, index) => (
-                        <SuccessStory key={index} story={story} />
-                    ))}
+                    {stories.filter(story => !story.videoOnly).map((story, index) => {
+                        // Strip videos out of the visual feed for Impact Journey
+                        const journeyStory = {
+                            ...story,
+                            media: story.media?.filter(m => m.type !== "video")
+                        };
+                        return <SuccessStory key={index} story={journeyStory} />;
+                    })}
                 </div>
             </section>
 
@@ -800,22 +875,56 @@ const SuccessStories = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {impactVideos.map((story, index) => {
                             const videoMedia = story.media.find(m => m.type === "video");
+                            const isGoogleDrive = videoMedia.src.includes('drive.google.com');
+                            
                             return (
                                 <div key={index} className="bg-gray-50 rounded-lg shadow p-4 hover:shadow-lg transition-shadow">
-                                    <div className="relative w-full h-48 bg-black rounded-md overflow-hidden mb-4">
-                                        <video
-                                            controls
-                                            playsInline
-                                            preload="metadata"
-                                            poster={videoMedia.thumbnail || "/images/KgosanaLogo.png"}
-                                            className="w-full h-full object-contain"
-                                            onError={(e) => {
-                                                e.target.poster = "/images/KgosanaLogo.png";
-                                            }}
-                                        >
-                                            <source src={videoMedia.src} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                        </video>
+                                    <div className="relative w-full h-48 bg-black rounded-md overflow-hidden mb-4 group">
+                                        {(videoMedia.src.endsWith(".mp4") || videoMedia.src.endsWith(".webm")) ? (
+                                            <video
+                                                controls
+                                                playsInline
+                                                preload="metadata"
+                                                poster={videoMedia.thumbnail || "/images/KgosanaLogo.png"}
+                                                className="w-full h-full object-contain"
+                                                onPlay={handlePlay}
+                                                onError={(e) => {
+                                                    e.target.poster = "/images/KgosanaLogo.png";
+                                                }}
+                                            >
+                                                <source src={videoMedia.src} type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        ) : isGoogleDrive ? (
+                                            <div className="relative w-full h-full flex items-center justify-center">
+                                                <img 
+                                                    src={videoMedia.thumbnail || "/images/KgosanaLogo.png"} 
+                                                    alt={story.title} 
+                                                    className="w-full h-full object-cover opacity-50 group-hover:opacity-40 transition-opacity"
+                                                />
+                                                <a 
+                                                    href={videoMedia.src} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="absolute inset-0 flex flex-col items-center justify-center text-white hover:text-green-400 transition-colors"
+                                                >
+                                                    <svg className="w-14 h-14 mb-2 opacity-90 drop-shadow-lg" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                                                    </svg>
+                                                    <span className="font-medium text-sm px-4 py-1.5 bg-black/60 backdrop-blur-sm rounded-full shadow-lg border border-white/10">
+                                                        Watch on Google Drive
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        ) : (
+                                            <iframe
+                                                src={videoMedia.src}
+                                                title={story.title}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                                                allowFullScreen
+                                                className="w-full h-full"
+                                            ></iframe>
+                                        )}
                                     </div>
                                     <h3 className="font-semibold text-lg text-green-800 line-clamp-2">{story.title}</h3>
                                 </div>
