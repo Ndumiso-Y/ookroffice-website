@@ -59,7 +59,7 @@ const SuccessStory = ({ story }) => {
     }, []);
 
     return (
-        <div className={`relative flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full h-[450px] ${isFeatured ? 'ring-2 ring-green-700 shadow-xl' : ''}`}>
+        <div className={`relative flex flex-col justify-between p-6 rounded-lg shadow-lg bg-white max-w-md w-full min-h-[450px] ${isFeatured ? 'ring-2 ring-green-700 shadow-xl' : ''}`}>
             {isFeatured && (
                 <span className="absolute top-3 right-3 bg-green-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow z-10">
                     Featured
@@ -76,7 +76,8 @@ const SuccessStory = ({ story }) => {
                                 >
                                     <img
                                         src={item.src}
-                                        alt={story.title}
+                                        alt={item.alt || story.title}
+                                        loading={index === 0 ? "eager" : "lazy"}
                                         className="max-w-full max-h-full object-contain rounded-md"
                                     />
                                 </div>
@@ -173,6 +174,7 @@ const SuccessStory = ({ story }) => {
                 <div className="fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-50">
                     <button
                         onClick={closeImageGallery}
+                        aria-label="Close image gallery"
                         className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 z-10"
                     >
                         ✕
@@ -180,6 +182,7 @@ const SuccessStory = ({ story }) => {
 
                     <button
                         onClick={prevImage}
+                        aria-label="Show previous image"
                         className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold hover:text-gray-300 z-10"
                     >
                         ‹
@@ -189,7 +192,7 @@ const SuccessStory = ({ story }) => {
                         {story.media ? (
                             <img
                                 src={story.media.filter(item => item.type === "image")[currentImageIndex]?.src}
-                                alt={story.title}
+                                alt={story.media.filter(item => item.type === "image")[currentImageIndex]?.alt || story.title}
                                 className="max-w-full max-h-[90vh] object-contain"
                             />
                         ) : (
@@ -203,6 +206,7 @@ const SuccessStory = ({ story }) => {
 
                     <button
                         onClick={nextImage}
+                        aria-label="Show next image"
                         className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-5xl font-bold hover:text-gray-300 z-10"
                     >
                         ›
@@ -237,6 +241,61 @@ const SuccessStories = () => {
 
     const stories = [
         {
+            title: "Mphe-Bana II Grade 12 Leadership Excellence & Prayer Session",
+            date: "2026-08-25",
+            description: "On 25 August 2026, Mphe-Bana II Secondary School hosted a Grade 12 Leadership Excellence & Prayer Session in support of the Class of 2026. Hosted by the School Principal under the leadership of Ps Omega Khunou and Kgosana Koketso Rakhudu of the Royal Bafokeng Nation, the engagement brought together traditional and faith leadership, CEOs, health-sector executives, SAPS, business representatives and community stakeholders. Held under the Industry CEOs banner, the programme combined motivational engagement around consistency, resilience and purpose with intercessory prayer, learner recognition, culture and unity, reflecting a shared commitment to preparing young people for leadership through education, values and community support.",
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/Mphe-Bana-II/grade-12-leadership-prayer.mp4",
+                    thumbnail: "/Impact/Mphe-Bana-II/DSC02935.jpg",
+                    title: "Grade 12 Leadership Excellence & Prayer Session",
+                    description: "Leadership, faith, education and cross-sector participation came together at Mphe-Bana II Secondary School in support of the Class of 2026, with a focus on resilience, purpose, learner recognition and preparation for future leadership."
+                },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02935.jpg", alt: "Learners and community leaders gathered for the Grade 12 leadership session" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DJI_0261.jpg", alt: "Aerial view of learners assembled in the school grounds" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02955.jpg", alt: "Kgosana Koketso Rakhudu engaging with learners during the programme" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02619.jpg", alt: "A community leader addressing participants at the school session" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02657.jpg", alt: "A speaker delivering a leadership address to learners" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02764.jpg", alt: "Kgosana Koketso Rakhudu speaking during the leadership programme" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02795.jpg", alt: "Learners listening during the Grade 12 leadership and prayer session" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02810.jpg", alt: "A community leader participating alongside assembled learners" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02814.jpg", alt: "A faith leader engaging learners during the programme" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02886.jpg", alt: "A speaker addressing learners and community stakeholders" },
+                { type: "image", src: "/Impact/Mphe-Bana-II/DSC02952.jpg", alt: "Learners taking part in a cultural moment during the school programme" }
+            ],
+        },
+        {
+            title: "Let Your Light Shine — Academic Achievement Awards",
+            date: "2026-08-25",
+            description: "Kgotla Ya Rakhudu Tsitsing continued its focus on education and youth development through an achievement awards engagement celebrating academic excellence across Grades 1 to 7. Held in partnership with a community-focused foundation under the theme ‘Let Your Light Shine Even Before Others,’ the initiative brought together learners, educators and community leadership to recognise outstanding performance while reinforcing values of purpose, leadership and potential. The engagement reflects a continued commitment to ensuring that young people are recognised, supported and encouraged to pursue excellence.",
+            media: [
+                {
+                    type: "video",
+                    src: "/Impact/Letsibogo/future-leaders-ceos-classroom.mp4",
+                    thumbnail: "/Impact/Letsibogo/achievement-awards/LRK06569.jpg",
+                    title: "Future Leaders Inspired — CEOs in the Classroom",
+                    description: "An education and leadership engagement bringing learners, educators and community leadership together around academic excellence, recognition, mentorship and the development of future leaders."
+                },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06569.jpg", alt: "Learners gathered outdoors for the academic achievement awards" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06096.jpg", alt: "Recognition gifts prepared for learners at the awards engagement" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06101.jpg", alt: "Awards and learner gifts arranged for the ceremony" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06113.jpg", alt: "A young participant wearing a leadership sash at the awards programme" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06120.jpg", alt: "A community leader attending the academic achievement awards" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06148.jpg", alt: "Learners in school and cultural attire watching the programme" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06177.jpg", alt: "A speaker addressing learners and educators during the ceremony" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06185.jpg", alt: "Education and community leaders together on the programme stage" },
+                { type: "image", src: "/Impact/Letsibogo/achievement-awards/LRK06197.jpg", alt: "Community leaders participating in a celebratory cultural moment" }
+            ],
+        },
+        {
+            title: "Tradition as a Catalyst for Development",
+            description: "The Office of Kgosana Koketso Rakhudu reflects a model of traditional leadership positioned for contemporary development — connecting heritage, governance and long-term community resilience. Under the leadership of Kgosana Koketso Rakhudu, the Office promotes community-led growth, self-investment and purpose-driven leadership while aligning local priorities with the Royal Bafokeng Nation Plan 2035, South Africa’s National Development Plan 2030 and the United Nations Sustainable Development Goals. The approach positions tradition not only as something to preserve, but as a platform from which communities can participate in shaping sustainable economic and social progress.",
+            media: [
+                { type: "image", src: "/Impact/Whatsapp/team-office.jpg", alt: "The Office of Kgosana Koketso Rakhudu team" }
+            ],
+        },
+        {
             title: "Tantana Primary School Grade 7 CEO Breakfast",
             description: "The Tantana Primary School Grade 7 CEO Breakfast brought together education, business and community leadership around the development of future leaders. Hosted by Principal Ms Lesego Kgwadibana, the engagement featured CEO Mr Kagiso Dibotelo in partnership with Kgosana Koketso Rakhudu and introduced Grade 7 learners to themes of academic excellence, entrepreneurial thinking, mentorship and character development. Through the Business & Academic Development Framework, the initiative created a platform for learners to engage with practical leadership principles, goal-setting and the relationship between education, opportunity and service.",
             media: [
@@ -262,7 +321,7 @@ const SuccessStories = () => {
             media: [
                 {
                     type: "video",
-                    src: "/Impact/Whatsapp/Leaders aren't born. They're built.mp4",
+                    src: "/Impact/Whatsapp/Leaders aren’t born. They’re built.mp4",
                     thumbnail: "/Impact/Whatsapp/thumb_leaders_arent_born.jpg"
                 }
             ],
@@ -876,6 +935,7 @@ const SuccessStories = () => {
                         {impactVideos.map((story, index) => {
                             const videoMedia = story.media.find(m => m.type === "video");
                             const isGoogleDrive = videoMedia.src.includes('drive.google.com');
+                            const videoTitle = videoMedia.title || story.title;
                             
                             return (
                                 <div key={index} className="bg-gray-50 rounded-lg shadow p-4 hover:shadow-lg transition-shadow">
@@ -919,14 +979,17 @@ const SuccessStories = () => {
                                         ) : (
                                             <iframe
                                                 src={videoMedia.src}
-                                                title={story.title}
+                                                title={videoTitle}
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                                                 allowFullScreen
                                                 className="w-full h-full"
                                             ></iframe>
                                         )}
                                     </div>
-                                    <h3 className="font-semibold text-lg text-green-800 line-clamp-2">{story.title}</h3>
+                                    <h3 className="font-semibold text-lg text-green-800 line-clamp-2">{videoTitle}</h3>
+                                    {videoMedia.description && (
+                                        <p className="mt-2 text-sm text-gray-600">{videoMedia.description}</p>
+                                    )}
                                 </div>
                             );
                         })}
