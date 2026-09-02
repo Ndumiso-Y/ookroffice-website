@@ -27,6 +27,7 @@ function Footer() {
           <Link to="/successstories" className="hover:text-white">Impact Journey</Link>
           <Link to="/divisions" className="hover:text-white">Divisions</Link>
           <Link to="/leadership" className="hover:text-white">Leadership</Link>
+          <Link to="/book-dr-koketso-rakhudu" className="hover:text-white">Book a Speaker</Link>
           <Link to="/contact" className="hover:text-white">Contact</Link>
         </div>
       </div>

@@ -19,6 +19,7 @@ import KgosanaKoketsoRakhuduGroup from './Components/KgosanaKoketsoRakhuduGroup'
 import HakemEnergiesFoundation from './Components/HakemEnergiesFoundation';
 import ScrollToTop from './Components/ScrollToTop';
 import NotFound from './Components/NotFound';
+import SpeakerBooking from './Components/SpeakerBooking';
 
 // Division Full Websites — lazy loaded so they don't bloat the main bundle
 const KRFSite = lazy(() => import('./DivisionSites/KRF/KRFSite'));
@@ -67,6 +68,7 @@ function App() {
               <Route path="/business-school-of-leadership-excellence" element={<BusinessSchoolOfLeadershipExcellence />} />
               <Route path="/kgosana-koketso-rakhudu-group" element={<KgosanaKoketsoRakhuduGroup />} />
               <Route path="/hakem-energies-foundation" element={<HakemEnergiesFoundation />} />
+              <Route path="/book-dr-koketso-rakhudu" element={<SpeakerBooking />} />
               <Route path="/privacy" element={<NotFound type="privacy" />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

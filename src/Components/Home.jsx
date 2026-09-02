@@ -439,6 +439,32 @@ function Home() {
 </section>
         
 
+        {/* Speaker Booking CTA Section */}
+        <motion.section 
+          className="bg-gradient-to-r from-[#0F3521] to-[#1B5538] text-white rounded-xl shadow-2xl overflow-hidden mb-16 relative"
+          whileInView={{ y: [50, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+          <div className="relative p-10 md:p-14 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 z-10">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Bring Leadership Into the Room</h2>
+              <p className="text-lg text-white/90 leading-relaxed mb-0">
+                Invite Dr Koketso Rakhudu to contribute to your conference, forum, academic engagement or leadership platform.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <Link 
+                to="/book-dr-koketso-rakhudu"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1B5538] rounded-full hover:bg-gray-100 transition-colors duration-300 font-bold text-lg shadow-lg hover:shadow-xl"
+              >
+                Book Dr Koketso Rakhudu <ChevronRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Contact Section */}
 <motion.footer 
   className="text-center p-8 bg-white rounded-xl shadow-lg"

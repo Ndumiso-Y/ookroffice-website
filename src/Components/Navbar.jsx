@@ -13,7 +13,8 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaVideo,
-  FaFolderOpen
+  FaFolderOpen,
+  FaMicrophone
 } from 'react-icons/fa';
 import { Menu, X } from 'lucide-react';
 import ResponsiveLogo from './ResponsiveLogo';
@@ -42,6 +43,7 @@ const Navbar = () => {
     { icon: <FaVideo className="w-5 h-5" />, text: "Impact Videos", path: "/successstories#impact-videos" },
     { icon: <FaFolderOpen className="w-5 h-5" />, text: "Frameworks & Reports", path: "/successstories#frameworks" },
     { icon: <FaUserTie className="w-5 h-5" />, text: "Leadership", path: "/leadership" },
+    { icon: <FaMicrophone className="w-5 h-5" />, text: "Book a Speaker", path: "/book-dr-koketso-rakhudu" },
     { icon: <FaEnvelope className="w-5 h-5" />, text: "Contact", path: "/contact" }
   ];
 
